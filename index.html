@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -839,54 +839,6 @@
     font-style: italic;
   }
 
-  /* SOCIAL PROOF */
-  .testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 60px;
-  }
-  .testimonial {
-    background: var(--surface);
-    padding: 32px 28px;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--line);
-    display: flex;
-    flex-direction: column;
-  }
-  .testimonial-stars { color: var(--gold); margin-bottom: 16px; font-size: 14px; }
-  .testimonial-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    line-height: 1.45;
-    color: var(--ink);
-    margin-bottom: 24px;
-    flex-grow: 1;
-  }
-  .testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding-top: 16px;
-    border-top: 1px solid var(--line);
-  }
-  .testimonial-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(217, 167, 160, 0.6), rgba(196, 168, 120, 0.4));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    color: var(--ink);
-    font-size: 16px;
-  }
-  .testimonial-author-name { font-weight: 600; font-size: 14px; }
-  .testimonial-author-meta { font-size: 13px; color: var(--ink-faint); }
-
-  /* COMPARISON */
   .compare-table {
     max-width: 720px;
     margin: 60px auto 0;
@@ -916,37 +868,6 @@
     font-variant-numeric: tabular-nums;
   }
 
-  /* FOUNDER */
-  .founder {
-    max-width: 720px;
-    margin: 0 auto;
-    text-align: center;
-    background: var(--surface);
-    padding: 56px 48px;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--line);
-  }
-  .founder-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    line-height: 1.4;
-    color: var(--ink);
-    margin-bottom: 28px;
-    font-style: italic;
-  }
-  .founder-name {
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.04em;
-  }
-  .founder-title {
-    font-size: 13px;
-    color: var(--ink-faint);
-    letter-spacing: 0.06em;
-    margin-top: 2px;
-  }
-
-  /* GUARANTEE */
   .guarantee {
     max-width: 680px;
     margin: 0 auto;
@@ -1096,12 +1017,9 @@
       grid-template-columns: 1fr;
       gap: 32px;
     }
-    .testimonial-grid { grid-template-columns: 1fr; }
     section { padding: 64px 0; }
     .final-cta { padding: 80px 24px; }
     .nav-cta { padding: 8px 16px; font-size: 13px; }
-    .founder { padding: 40px 24px; }
-    .founder-quote { font-size: 22px; }
     .compare-row { padding: 16px 20px; font-size: 15px; }
     .compare-row { grid-template-columns: 1fr 100px; }
   }
@@ -1147,8 +1065,7 @@
         <strong>Delivered in 24 hours.</strong> &nbsp;&middot;&nbsp; 100% personalized &nbsp;&middot;&nbsp; Loved-it guarantee
       </div>
       <div class="hero-trust">
-        <div class="stars">&starf;&starf;&starf;&starf;&starf;</div>
-        <div class="stars-text"><strong>4.9/5</strong> from 1,200+ brides</div>
+        <div class="stars-text"><strong>Personalized PDF.</strong> Built from your photos, dress, and wedding-day vision.</div>
       </div>
     </div>
 
@@ -1311,17 +1228,17 @@
       <div class="deliverable-examples" aria-label="Examples of what the Wedding Day Preview includes">
         <article class="example-card">
           <span class="example-label">Face + makeup</span>
-          <h5>“Here is what to emphasize.”</h5>
+          <h5>â€œHere is what to emphasize.â€</h5>
           <p>Face shape, feature balance, eye/lip focus, blush placement, contour notes, and the makeup finish that will photograph best.</p>
         </article>
         <article class="example-card">
           <span class="example-label">Color + styling</span>
-          <h5>“Here are your best colors.”</h5>
+          <h5>â€œHere are your best colors.â€</h5>
           <p>Your undertone, best neutrals, wedding-week palette, metal choice, lipstick family, and colors to avoid near your face.</p>
         </article>
         <article class="example-card">
           <span class="example-label">Hair + skin prep</span>
-          <h5>“Bring this to your trial.”</h5>
+          <h5>â€œBring this to your trial.â€</h5>
           <p>Most flattering hair direction, styles to skip, skin-prep priorities, and a concise checklist for your MUA and hairstylist.</p>
         </article>
       </div>
@@ -1448,52 +1365,6 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section>
-  <div class="container-narrow">
-    <div class="section-eyebrow">Real brides</div>
-    <h2 class="section-h">&ldquo;I finally felt like myself &mdash; only better.&rdquo;</h2>
-  </div>
-  <div class="container">
-    <div class="testimonial-grid">
-      <div class="testimonial">
-        <div class="testimonial-stars">&starf;&starf;&starf;&starf;&starf;</div>
-        <div class="testimonial-quote">&ldquo;I'd been to two makeup trials and hated both. Aisle gave me a clear direction in a day. My MUA used the mood board exactly &mdash; I cried when I saw myself.&rdquo;</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">M</div>
-          <div>
-            <div class="testimonial-author-name">Maya R.</div>
-            <div class="testimonial-author-meta">Married Sept '25 &middot; Austin</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial-stars">&starf;&starf;&starf;&starf;&starf;</div>
-        <div class="testimonial-quote">&ldquo;The color analysis alone was worth $97. I'd been buying gold jewelry for years &mdash; turns out silver suits me. The whole wedding shifted.&rdquo;</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">L</div>
-          <div>
-            <div class="testimonial-author-name">Leila K.</div>
-            <div class="testimonial-author-meta">Bride &middot; Brooklyn</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial-stars">&starf;&starf;&starf;&starf;&starf;</div>
-        <div class="testimonial-quote">&ldquo;I'm a planner. I needed a plan. This gave me one. My hairstylist said it was the most useful brief she'd ever received from a bride.&rdquo;</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">J</div>
-          <div>
-            <div class="testimonial-author-name">Jess T.</div>
-            <div class="testimonial-author-meta">Engaged &middot; Chicago</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMPARISON -->
 <section class="section-bg-alt">
   <div class="container-narrow">
     <div class="section-eyebrow">The math</div>
@@ -1525,21 +1396,6 @@
   </div>
 </section>
 
-<!-- FOUNDER -->
-<section>
-  <div class="container">
-    <div class="founder">
-      <div class="section-eyebrow">A note from the founder</div>
-      <p class="founder-quote">
-        &ldquo;I built Aisle because I watched my sister cry the night before her wedding &mdash; not from joy, but because her makeup trial had gone wrong twice and she didn't know who to trust. Every bride deserves to walk down the aisle feeling certain. This is the tool I wish she'd had.&rdquo;
-      </p>
-      <div class="founder-name">Elena, Founder</div>
-      <div class="founder-title">Aisle</div>
-    </div>
-  </div>
-</section>
-
-<!-- GUARANTEE -->
 <section class="section-bg-alt">
   <div class="container">
     <div class="guarantee">
@@ -1560,11 +1416,11 @@
     <div class="faq">
       <div class="faq-item">
         <button class="faq-q">How does the AI actually work? <span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><p>We combine computer vision (face shape, undertone, feature mapping, hair texture) with a curated bridal styling model trained on professional makeup, color theory, and what photographs well in real wedding lighting. Each analysis is then reviewed by a human bridal beauty director before it's sent to you.</p></div>
+        <div class="faq-a"><p>We combine computer vision cues (face shape, undertone, feature mapping, hair texture) with bridal styling guidance, color theory, and what photographs well in real wedding lighting. The result is formatted into a clear PDF brief you can use for your trial.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">How accurate is it, really? <span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><p>4.9/5 average rating from 1,200+ brides. The analysis is built from your real features &mdash; not trends. If it ever feels off, our redo + refund policy has you covered.</p></div>
+        <button class="faq-q">How personalized is it? <span class="faq-q-icon">+</span></button>
+        <div class="faq-a"><p>Your report is built from the photos and details you provide: your face shape, coloring, hair texture, dress, venue, and overall wedding-day direction. If it ever feels off, our redo + refund policy has you covered.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">What photos should I upload? <span class="faq-q-icon">+</span></button>
@@ -1576,7 +1432,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Can I share it with my MUA and hairstylist? <span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><p>Yes &mdash; that's the point. The mood board is built to be shareable. Most brides forward it directly. Your beauty team will appreciate the clarity, and you'll get fewer surprises at the trial.</p></div>
+        <div class="faq-a"><p>Yes &mdash; that's the point. The PDF is built to be shareable, so you can forward it directly to your beauty team and walk into the trial with a clearer brief.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Is my data and my photos private? <span class="faq-q-icon">+</span></button>

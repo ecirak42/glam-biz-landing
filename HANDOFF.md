@@ -28,11 +28,10 @@ The checkout page keeps users on-site by embedding Square checkout. A fallback l
 ## Still Needed Before Paid Traffic
 
 1. Confirm fulfillment flow after Square purchase: intake email, upload form, and delivery workflow.
-2. Replace placeholder testimonials and social proof with real numbers or remove them.
-3. Add legal pages: privacy policy, terms, refund policy.
-4. Add favicon, Apple touch icon, and an original OG image.
-5. Install tracking: Meta Pixel / GA4 and test checkout events.
-6. Confirm refund / redo policy language matches what you can operationally support.
+2. Add legal pages: privacy policy, terms, refund policy.
+3. Add favicon, Apple touch icon, and an original OG image.
+4. Install tracking: Meta Pixel / GA4 and test checkout events.
+5. Confirm refund / redo policy language matches what you can operationally support.
 
 ## Editing Notes
 
