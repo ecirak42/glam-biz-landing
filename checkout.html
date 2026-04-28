@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Checkout &mdash; Aisle Bridal Analysis</title>
+<title>Checkout &mdash; Wedding Day Preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -224,6 +224,88 @@
     font-size: 13px;
     color: var(--ink-soft);
   }
+  .checkout-panel {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    box-shadow: var(--shadow);
+  }
+  .checkout-panel + .checkout-panel { margin-top: 20px; }
+  .checkout-panel h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .checkout-panel p {
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+  .square-pay-card {
+    margin-top: 24px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: linear-gradient(180deg, var(--surface), var(--bg));
+    padding: 22px;
+  }
+  .square-pay-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+  .square-product-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    line-height: 1.05;
+  }
+  .square-price {
+    font-size: 20px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .square-pay-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 52px;
+    padding: 0 24px;
+    background: #81B5BB;
+    color: #102326;
+    border: 1px solid rgba(0,0,0,0.10);
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.15s ease, filter 0.15s ease;
+  }
+  .square-pay-btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(0.98);
+  }
+  .secure-list {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .secure-list li {
+    display: flex;
+    gap: 10px;
+    color: var(--ink-soft);
+    font-size: 14px;
+  }
+  .secure-list li::before {
+    content: '\2713';
+    color: var(--blush-deep);
+    font-weight: 700;
+  }
 
   /* ORDER SUMMARY */
   .summary {
@@ -313,69 +395,6 @@
   }
   .promo strong { color: var(--ink); }
 
-  /* SUCCESS STATE */
-  .success-screen {
-    display: none;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    padding: 64px 24px;
-  }
-  .success-screen.active { display: flex; }
-  .success-card {
-    max-width: 540px;
-    text-align: center;
-    background: var(--surface);
-    padding: 56px 40px;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--line);
-    box-shadow: var(--shadow-lift);
-  }
-  .success-icon {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    background: var(--blush-deep);
-    color: var(--bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    margin: 0 auto 28px;
-  }
-  .success-card h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 1.1;
-    margin-bottom: 16px;
-  }
-  .success-card p {
-    color: var(--ink-soft);
-    margin-bottom: 12px;
-  }
-  .success-next {
-    background: var(--bg-alt);
-    border-radius: var(--radius);
-    padding: 20px;
-    margin-top: 24px;
-    text-align: left;
-  }
-  .success-next-h {
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    font-weight: 600;
-    margin-bottom: 12px;
-  }
-  .success-next ol {
-    padding-left: 20px;
-    font-size: 14px;
-    color: var(--ink);
-    line-height: 1.7;
-  }
-
   footer {
     padding: 24px;
     text-align: center;
@@ -398,6 +417,7 @@
     h1 { font-size: 30px; }
     .field-row { grid-template-columns: 1fr; }
     .field-row-3 { grid-template-columns: 1fr 1fr; }
+    .square-pay-top { flex-direction: column; gap: 6px; }
   }
 </style>
 </head>
@@ -412,72 +432,51 @@
   </div>
 </nav>
 
-<!-- CHECKOUT FORM -->
+<!-- CHECKOUT -->
 <main class="checkout" id="checkout-view">
   <div>
-    <a href="index.html" class="checkout-back">← Back</a>
+    <a href="index.html" class="checkout-back">&larr; Back</a>
     <h1 class="serif">Almost there.</h1>
-    <p class="checkout-sub">Your personalized bridal beauty analysis is one step away. Delivered to your inbox in 24 hours.</p>
+    <p class="checkout-sub">Your Wedding Day Preview is one secure payment away. Square will collect your payment details and send your receipt.</p>
 
-    <form id="order-form">
-      <div class="form-section">
-        <div class="form-label-h">Contact</div>
-        <div class="field">
-          <label for="email">Email (where we'll send your analysis)</label>
-          <input type="email" id="email" name="email" placeholder="you@email.com" required />
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="first">First name</label>
-            <input type="text" id="first" name="first" placeholder="Sophia" required />
+    <section class="checkout-panel">
+      <div class="form-label-h">Secure payment</div>
+      <h2>Pay through Square.</h2>
+      <p>Click below to complete your order in Square's secure checkout window. After payment, check your email for next-step instructions.</p>
+
+      <div class="square-pay-card">
+        <div class="square-pay-top">
+          <div>
+            <div class="square-product-name">Wedding Day Preview</div>
+            <p>Personalized bridal beauty analysis</p>
           </div>
-          <div class="field">
-            <label for="last">Last name</label>
-            <input type="text" id="last" name="last" placeholder="Martinez" required />
-          </div>
+          <div class="square-price">$97.00</div>
         </div>
+        <a
+          id="embedded-checkout-modal-checkout-button"
+          class="square-pay-btn"
+          target="_blank"
+          rel="noopener"
+          data-url="https://square.link/u/p4RSAP6I?src=embd"
+          href="https://square.link/u/p4RSAP6I?src=embed"
+        >Pay now</a>
       </div>
 
-      <div class="form-section">
-        <div class="form-label-h">Wedding details</div>
-        <div class="field">
-          <label for="date">Wedding date (optional)</label>
-          <input type="text" id="date" name="date" placeholder="Sept 14, 2026" />
-        </div>
-      </div>
-
-      <div class="form-section">
-        <div class="form-label-h">Payment</div>
-        <div class="pay-method">
-          <div class="pay-option active">Credit card</div>
-          <div class="pay-option">Apple Pay</div>
-        </div>
-        <div class="field">
-          <label for="card">Card number</label>
-          <input type="text" id="card" name="card" placeholder="1234 1234 1234 1234" inputmode="numeric" />
-        </div>
-        <div class="field-row-3">
-          <div class="field">
-            <label for="exp">Expiry</label>
-            <input type="text" id="exp" name="exp" placeholder="MM / YY" />
-          </div>
-          <div class="field">
-            <label for="cvc">CVC</label>
-            <input type="text" id="cvc" name="cvc" placeholder="123" />
-          </div>
-          <div class="field">
-            <label for="zip">ZIP</label>
-            <input type="text" id="zip" name="zip" placeholder="90210" />
-          </div>
-        </div>
-      </div>
-
-      <button type="submit" class="btn" id="submit-btn">Complete order &mdash; $97</button>
       <div class="btn-meta">
         <span class="lock" style="display:inline-block; vertical-align:-2px; margin-right:6px;"></span>
-        Secure checkout. Loved-it guarantee. Refundable within 14 days.
+        Secure checkout powered by Square.
       </div>
-    </form>
+    </section>
+
+    <section class="checkout-panel">
+      <div class="form-label-h">After payment</div>
+      <h2>What happens next</h2>
+      <ul class="secure-list">
+        <li>You'll receive a Square receipt for your $97 purchase.</li>
+        <li>You'll get instructions for sending your photos and wedding details.</li>
+        <li>Your personalized analysis is delivered within 24 hours after intake is complete.</li>
+      </ul>
+    </section>
   </div>
 
   <aside class="summary">
@@ -485,8 +484,8 @@
     <div class="summary-product">
       <div class="summary-img">A.</div>
       <div>
-        <div class="summary-product-name">Bridal Beauty Analysis</div>
-        <div class="summary-product-meta">Personalized · Delivered in 24h</div>
+        <div class="summary-product-name">Wedding Day Preview</div>
+        <div class="summary-product-meta">Personalized &middot; Delivered in 24h</div>
         <div class="summary-product-price">$97.00</div>
       </div>
     </div>
@@ -502,59 +501,49 @@
   </aside>
 </main>
 
-<!-- SUCCESS STATE -->
-<div class="success-screen" id="success-view">
-  <div class="success-card">
-    <div class="success-icon">✓</div>
-    <h2 class="serif">You're in.</h2>
-    <p>Your order is confirmed. We've sent a receipt and next-step instructions to <strong id="success-email">your email</strong>.</p>
-    <div class="success-next">
-      <div class="success-next-h">What happens next</div>
-      <ol>
-        <li>Check your inbox for upload instructions (within 5 minutes).</li>
-        <li>Upload 3&ndash;5 photos of you, your dress, and your venue vibe.</li>
-        <li>Your personalized bridal beauty analysis lands in your inbox within 24 hours.</li>
-      </ol>
-    </div>
-  </div>
-</div>
-
 <footer>
-  © 2026 Aisle. Made with care for brides everywhere.
+  &copy; 2026 Aisle. Made with care for brides everywhere.
 </footer>
 
 <script>
-  // Payment method toggle
-  document.querySelectorAll('.pay-option').forEach(opt => {
-    opt.addEventListener('click', () => {
-      document.querySelectorAll('.pay-option').forEach(o => o.classList.remove('active'));
-      opt.classList.add('active');
-    });
-  });
-
-  // Mock order submit — captures intent without taking real payment yet
-  document.getElementById('order-form').addEventListener('submit', (e) => {
+  function showCheckoutWindow(e) {
     e.preventDefault();
-    const btn = document.getElementById('submit-btn');
-    const email = document.getElementById('email').value;
 
-    btn.disabled = true;
-    btn.textContent = 'Processing...';
+    const button = document.getElementById('embedded-checkout-modal-checkout-button');
+    const url = button.getAttribute('data-url');
+    const title = 'Square Payment Links';
+    const topWindow = window.top ? window.top : window;
+    const dualScreenLeft = topWindow.screenLeft !== undefined ? topWindow.screenLeft : topWindow.screenX;
+    const dualScreenTop = topWindow.screenTop !== undefined ? topWindow.screenTop : topWindow.screenY;
+    const width = topWindow.innerWidth || document.documentElement.clientWidth || screen.width;
+    const height = topWindow.innerHeight || document.documentElement.clientHeight || screen.height;
+    const popupHeight = height * 0.75;
+    const popupWidth = 500;
+    const systemZoom = width / topWindow.screen.availWidth;
+    const left = (width - popupWidth) / 2 / systemZoom + dualScreenLeft;
+    const top = (height - popupHeight) / 2 / systemZoom + dualScreenTop;
+    const newWindow = window.open(
+      url,
+      title,
+      `scrollbars=yes,width=${popupWidth / systemZoom},height=${popupHeight / systemZoom},top=${top},left=${left}`
+    );
 
-    // Track conversion (placeholder for Meta Pixel / GA4)
-    // window.fbq && fbq('track', 'Purchase', { value: 97, currency: 'USD' });
-    // window.gtag && gtag('event', 'purchase', { value: 97, currency: 'USD' });
+    // Track payment intent (placeholder for Meta Pixel / GA4)
+    // window.fbq && fbq('track', 'InitiateCheckout', { value: 97, currency: 'USD' });
+    // window.gtag && gtag('event', 'begin_checkout', { value: 97, currency: 'USD' });
 
-    // TODO: replace with real Stripe / payment processor integration
-    // For demand validation, this captures email + intent and shows success.
-    setTimeout(() => {
-      document.getElementById('checkout-view').style.display = 'none';
-      document.getElementById('success-view').classList.add('active');
-      document.getElementById('success-email').textContent = email || 'your email';
-      window.scrollTo(0, 0);
-    }, 900);
-  });
+    if (newWindow && window.focus) {
+      newWindow.focus();
+    } else {
+      window.location.href = url;
+    }
+  }
+
+  document
+    .getElementById('embedded-checkout-modal-checkout-button')
+    .addEventListener('click', showCheckoutWindow);
 </script>
 
 </body>
 </html>
+
