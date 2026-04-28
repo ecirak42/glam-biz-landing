@@ -289,6 +289,32 @@
     transform: translateY(-1px);
     filter: brightness(0.98);
   }
+  .square-embed-wrap {
+    margin-top: 24px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+  .square-embed {
+    width: 100%;
+    height: min(78vh, 840px);
+    min-height: 680px;
+    border: 0;
+    display: block;
+    background: var(--surface);
+  }
+  .square-fallback {
+    margin-top: 14px;
+    color: var(--ink-soft);
+    font-size: 13px;
+    text-align: center;
+  }
+  .square-fallback a {
+    color: var(--ink);
+    font-weight: 600;
+  }
   .secure-list {
     list-style: none;
     display: grid;
@@ -437,27 +463,24 @@
   <div>
     <a href="index.html" class="checkout-back">&larr; Back</a>
     <h1 class="serif">Almost there.</h1>
-    <p class="checkout-sub">Your Wedding Day Preview is one secure payment away. Square will collect your payment details and send your receipt.</p>
+    <p class="checkout-sub">Complete your Wedding Day Preview order below. Square securely handles the payment inside this checkout page.</p>
 
     <section class="checkout-panel">
       <div class="form-label-h">Secure payment</div>
       <h2>Pay through Square.</h2>
-      <p>Click below to continue to Square's full secure checkout. After payment, check your email for next-step instructions.</p>
+      <p>Enter your payment details below. After payment, check your email for next-step instructions.</p>
 
-      <div class="square-pay-card">
-        <div class="square-pay-top">
-          <div>
-            <div class="square-product-name">Wedding Day Preview</div>
-            <p>Personalized bridal beauty analysis</p>
-          </div>
-          <div class="square-price">$97.00</div>
-        </div>
-        <a
-          id="embedded-checkout-modal-checkout-button"
-          class="square-pay-btn"
-          href="https://square.link/u/p4RSAP6I?src=embed"
-        >Pay now</a>
+      <div class="square-embed-wrap">
+        <iframe
+          class="square-embed"
+          title="Square checkout for Wedding Day Preview"
+          src="https://square.link/u/p4RSAP6I?src=embed"
+          loading="eager"
+          referrerpolicy="no-referrer-when-downgrade"
+          allow="payment *"
+        ></iframe>
       </div>
+      <p class="square-fallback">If the checkout does not load, <a href="https://square.link/u/p4RSAP6I?src=embed">open the secure Square checkout</a>.</p>
 
       <div class="btn-meta">
         <span class="lock" style="display:inline-block; vertical-align:-2px; margin-right:6px;"></span>
@@ -501,14 +524,6 @@
 <footer>
   &copy; 2026 Aisle. Made with care for brides everywhere.
 </footer>
-
-<script>
-  document.getElementById('embedded-checkout-modal-checkout-button').addEventListener('click', () => {
-    // Track payment intent (placeholder for Meta Pixel / GA4)
-    // window.fbq && fbq('track', 'InitiateCheckout', { value: 97, currency: 'USD' });
-    // window.gtag && gtag('event', 'begin_checkout', { value: 97, currency: 'USD' });
-  });
-</script>
 
 </body>
 </html>
