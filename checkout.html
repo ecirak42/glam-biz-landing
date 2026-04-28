@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Checkout &mdash; Aisle Bridal Analysis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FBF7F3;
+    --bg-alt: #F4ECE3;
+    --surface: #FFFFFF;
+    --ink: #2A2521;
+    --ink-soft: #6B5F54;
+    --ink-faint: #9A8E83;
+    --line: #E9DFD3;
+    --blush: #D9A7A0;
+    --blush-deep: #B8807A;
+    --gold: #9C7E4F;
+    --gold-soft: #C4A878;
+    --shadow: 0 1px 2px rgba(42, 37, 33, 0.04), 0 8px 32px rgba(42, 37, 33, 0.06);
+    --shadow-lift: 0 2px 4px rgba(42, 37, 33, 0.05), 0 16px 48px rgba(42, 37, 33, 0.10);
+    --radius: 4px;
+    --radius-lg: 12px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .serif { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
+
+  nav {
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+  }
+  .nav-row {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .logo span { color: var(--blush-deep); }
+  .nav-secure {
+    font-size: 13px;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.04em;
+  }
+  .lock {
+    width: 14px; height: 14px;
+    border: 1.5px solid var(--ink-soft);
+    border-radius: 2px;
+    position: relative;
+  }
+  .lock::before {
+    content: '';
+    position: absolute;
+    width: 8px; height: 6px;
+    border: 1.5px solid var(--ink-soft);
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .checkout {
+    flex: 1;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 64px;
+  }
+
+  .checkout-back {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .checkout-back:hover { color: var(--ink); }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-bottom: 8px;
+  }
+  .checkout-sub {
+    color: var(--ink-soft);
+    margin-bottom: 36px;
+  }
+
+  .form-section {
+    margin-bottom: 28px;
+  }
+  .form-label-h {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .field {
+    margin-bottom: 14px;
+  }
+  .field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--ink-soft);
+  }
+  .field input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 16px;
+    background: var(--surface);
+    color: var(--ink);
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .field input:focus {
+    outline: none;
+    border-color: var(--blush-deep);
+    box-shadow: 0 0 0 3px rgba(184, 128, 122, 0.12);
+  }
+  .field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .field-row-3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 14px;
+  }
+
+  .pay-method {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .pay-option {
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    background: var(--surface);
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .pay-option:hover { border-color: var(--blush); }
+  .pay-option.active {
+    border-color: var(--ink);
+    background: var(--bg-alt);
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 20px 32px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    background: var(--ink);
+    color: var(--bg);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.15s, transform 0.15s;
+    box-shadow: var(--shadow);
+    margin-top: 12px;
+  }
+  .btn:hover { background: #1a1714; transform: translateY(-1px); }
+  .btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+  .btn-meta {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  /* ORDER SUMMARY */
+  .summary {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    height: fit-content;
+    position: sticky;
+    top: 24px;
+    box-shadow: var(--shadow);
+  }
+  .summary-h {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .summary-product {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 20px;
+  }
+  .summary-img {
+    width: 72px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background:
+      linear-gradient(160deg, rgba(217, 167, 160, 0.4) 0%, rgba(244, 236, 227, 0.7) 50%, rgba(196, 168, 120, 0.4) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink);
+    font-size: 22px;
+  }
+  .summary-product-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .summary-product-meta {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+  }
+  .summary-product-price {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .summary-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .summary-total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    margin-top: 8px;
+    border-top: 1px solid var(--line);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--ink);
+  }
+  .summary-total-amount { font-variant-numeric: tabular-nums; }
+
+  .promo {
+    margin-top: 24px;
+    padding: 16px;
+    background: var(--bg-alt);
+    border-radius: var(--radius);
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .promo strong { color: var(--ink); }
+
+  /* SUCCESS STATE */
+  .success-screen {
+    display: none;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 24px;
+  }
+  .success-screen.active { display: flex; }
+  .success-card {
+    max-width: 540px;
+    text-align: center;
+    background: var(--surface);
+    padding: 56px 40px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-lift);
+  }
+  .success-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--blush-deep);
+    color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    margin: 0 auto 28px;
+  }
+  .success-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .success-card p {
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+  }
+  .success-next {
+    background: var(--bg-alt);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-top: 24px;
+    text-align: left;
+  }
+  .success-next-h {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .success-next ol {
+    padding-left: 20px;
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.7;
+  }
+
+  footer {
+    padding: 24px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-faint);
+    border-top: 1px solid var(--line);
+  }
+
+  @media (max-width: 880px) {
+    .checkout {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 32px 20px 48px;
+    }
+    .summary {
+      position: static;
+      order: -1;
+      padding: 24px;
+    }
+    h1 { font-size: 30px; }
+    .field-row { grid-template-columns: 1fr; }
+    .field-row-3 { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-row">
+    <a href="index.html" class="logo">Aisle<span>.</span></a>
+    <div class="nav-secure">
+      <span class="lock"></span> SECURE CHECKOUT
+    </div>
+  </div>
+</nav>
+
+<!-- CHECKOUT FORM -->
+<main class="checkout" id="checkout-view">
+  <div>
+    <a href="index.html" class="checkout-back">← Back</a>
+    <h1 class="serif">Almost there.</h1>
+    <p class="checkout-sub">Your personalized bridal beauty analysis is one step away. Delivered to your inbox in 24 hours.</p>
+
+    <form id="order-form">
+      <div class="form-section">
+        <div class="form-label-h">Contact</div>
+        <div class="field">
+          <label for="email">Email (where we'll send your analysis)</label>
+          <input type="email" id="email" name="email" placeholder="you@email.com" required />
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="first">First name</label>
+            <input type="text" id="first" name="first" placeholder="Sophia" required />
+          </div>
+          <div class="field">
+            <label for="last">Last name</label>
+            <input type="text" id="last" name="last" placeholder="Martinez" required />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-label-h">Wedding details</div>
+        <div class="field">
+          <label for="date">Wedding date (optional)</label>
+          <input type="text" id="date" name="date" placeholder="Sept 14, 2026" />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-label-h">Payment</div>
+        <div class="pay-method">
+          <div class="pay-option active">Credit card</div>
+          <div class="pay-option">Apple Pay</div>
+        </div>
+        <div class="field">
+          <label for="card">Card number</label>
+          <input type="text" id="card" name="card" placeholder="1234 1234 1234 1234" inputmode="numeric" />
+        </div>
+        <div class="field-row-3">
+          <div class="field">
+            <label for="exp">Expiry</label>
+            <input type="text" id="exp" name="exp" placeholder="MM / YY" />
+          </div>
+          <div class="field">
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" name="cvc" placeholder="123" />
+          </div>
+          <div class="field">
+            <label for="zip">ZIP</label>
+            <input type="text" id="zip" name="zip" placeholder="90210" />
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn" id="submit-btn">Complete order &mdash; $97</button>
+      <div class="btn-meta">
+        <span class="lock" style="display:inline-block; vertical-align:-2px; margin-right:6px;"></span>
+        Secure checkout. Loved-it guarantee. Refundable within 14 days.
+      </div>
+    </form>
+  </div>
+
+  <aside class="summary">
+    <div class="summary-h">Your order</div>
+    <div class="summary-product">
+      <div class="summary-img">A.</div>
+      <div>
+        <div class="summary-product-name">Bridal Beauty Analysis</div>
+        <div class="summary-product-meta">Personalized · Delivered in 24h</div>
+        <div class="summary-product-price">$97.00</div>
+      </div>
+    </div>
+    <div class="summary-line"><span>Subtotal</span><span>$97.00</span></div>
+    <div class="summary-line"><span>Tax</span><span>$0.00</span></div>
+    <div class="summary-total">
+      <span>Total</span>
+      <span class="summary-total-amount">$97.00 USD</span>
+    </div>
+    <div class="promo">
+      <strong>Loved-it guarantee.</strong> Don't love your analysis? We'll redo it with a senior beauty director. Still not right? Full refund within 14 days.
+    </div>
+  </aside>
+</main>
+
+<!-- SUCCESS STATE -->
+<div class="success-screen" id="success-view">
+  <div class="success-card">
+    <div class="success-icon">✓</div>
+    <h2 class="serif">You're in.</h2>
+    <p>Your order is confirmed. We've sent a receipt and next-step instructions to <strong id="success-email">your email</strong>.</p>
+    <div class="success-next">
+      <div class="success-next-h">What happens next</div>
+      <ol>
+        <li>Check your inbox for upload instructions (within 5 minutes).</li>
+        <li>Upload 3&ndash;5 photos of you, your dress, and your venue vibe.</li>
+        <li>Your personalized bridal beauty analysis lands in your inbox within 24 hours.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2026 Aisle. Made with care for brides everywhere.
+</footer>
+
+<script>
+  // Payment method toggle
+  document.querySelectorAll('.pay-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      document.querySelectorAll('.pay-option').forEach(o => o.classList.remove('active'));
+      opt.classList.add('active');
+    });
+  });
+
+  // Mock order submit — captures intent without taking real payment yet
+  document.getElementById('order-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    const email = document.getElementById('email').value;
+
+    btn.disabled = true;
+    btn.textContent = 'Processing...';
+
+    // Track conversion (placeholder for Meta Pixel / GA4)
+    // window.fbq && fbq('track', 'Purchase', { value: 97, currency: 'USD' });
+    // window.gtag && gtag('event', 'purchase', { value: 97, currency: 'USD' });
+
+    // TODO: replace with real Stripe / payment processor integration
+    // For demand validation, this captures email + intent and shows success.
+    setTimeout(() => {
+      document.getElementById('checkout-view').style.display = 'none';
+      document.getElementById('success-view').classList.add('active');
+      document.getElementById('success-email').textContent = email || 'your email';
+      window.scrollTo(0, 0);
+    }, 900);
+  });
+</script>
+
+</body>
+</html>
