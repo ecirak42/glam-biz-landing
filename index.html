@@ -651,6 +651,67 @@
     border-color: rgba(184, 128, 122, 0.25);
     color: var(--blush-deep);
   }
+  .deliverable-showcase {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+    gap: 42px;
+    align-items: center;
+    margin-top: 60px;
+  }
+  .deliverable-image {
+    margin: 0;
+  }
+  .deliverable-image-frame {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    padding: 10px;
+    box-shadow: var(--shadow-lift);
+  }
+  .deliverable-image-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .deliverable-image figcaption {
+    margin-top: 14px;
+    text-align: center;
+    color: var(--ink-faint);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .deliverable-examples {
+    display: grid;
+    gap: 14px;
+  }
+  .example-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    box-shadow: var(--shadow);
+  }
+  .example-card h5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .example-card p {
+    color: var(--ink-soft);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .example-label {
+    display: inline-flex;
+    margin-bottom: 10px;
+    color: var(--blush-deep);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
 
   /* DELIVERABLE PREVIEW */
   .deliverable-clarity {
@@ -1028,6 +1089,8 @@
     .problem-grid { grid-template-columns: 1fr; }
     .steps { grid-template-columns: 1fr; gap: 48px; }
     .boards { grid-template-columns: 1fr; gap: 14px; }
+    .deliverable-showcase { grid-template-columns: 1fr; gap: 28px; }
+    .deliverable-examples { grid-template-columns: 1fr; }
     .deliverable-clarity { grid-template-columns: 1fr; }
     .sample-gallery {
       grid-template-columns: 1fr;
@@ -1233,67 +1296,35 @@
 <section class="section-bg-alt">
   <div class="container-narrow">
     <div class="section-eyebrow">What you get</div>
-    <h2 class="section-h">Six analysis boards. One complete bridal beauty plan. Built around <em>you</em>.</h2>
-    <p class="section-sub">Not a Pinterest folder. Not a generic guide. A specific, personalized set of analyses you can hand directly to your makeup artist, hairstylist, skincare pro, and tailor.</p>
+    <h2 class="section-h">A personalized PDF that turns your photos into a wedding-day beauty plan.</h2>
+    <p class="section-sub">You get clear visual pages, exact recommendations, and practical notes your beauty team can use. No vague inspo dump, no guessing at the trial.</p>
   </div>
   <div class="container">
-    <div class="boards">
-      <article class="board-card">
-        <div class="board-num">01</div>
-        <h5>Face Features Analysis</h5>
-        <p>An annotated map of your face &mdash; shape, eyes, brows, nose, cheeks, lips. The architectural read every makeup artist wishes you'd come in with.</p>
-        <div class="board-tags">
-          <span>Face shape</span><span>Eyes</span><span>Brows</span><span>Lips</span>
+    <div class="deliverable-showcase">
+      <figure class="deliverable-image">
+        <div class="deliverable-image-frame">
+          <img src="assets/wedding-day-preview-report.jpg" alt="Preview mockup of the Wedding Day Preview PDF report pages" />
         </div>
-      </article>
-      <article class="board-card">
-        <div class="board-num">02</div>
-        <h5>Color Analysis &mdash; Your Season</h5>
-        <p>Your color season, undertone, and the exact palette that lights you up. Plus the colors to avoid, the metals that flatter you, and the prints that work.</p>
-        <div class="board-tags">
-          <span>Warm autumn</span><span>Soft summer</span><span>Cool winter</span><span>+ 9 more</span>
-        </div>
-      </article>
-      <article class="board-card">
-        <div class="board-num">03</div>
-        <h5>Skin Analysis</h5>
-        <p>T-zone, cheeks, pores, texture &mdash; identified and addressed. Skin-prep direction so you glow on camera, not shine.</p>
-        <div class="board-tags">
-          <span>Skin type</span><span>T-zone read</span><span>Prep notes</span>
-        </div>
-      </article>
-      <article class="board-card">
-        <div class="board-num">04</div>
-        <h5>Hairstyle Mood Board</h5>
-        <p>Six most-flattering styles &mdash; rendered on <em>you</em>. Plus the styles to skip, your best hair colors, and styling tips matched to your dress neckline.</p>
-        <div class="board-tags">
-          <span>You in 6 styles</span><span>Color guide</span><span>Accessories</span>
-        </div>
-      </article>
-      <article class="board-card">
-        <div class="board-num">05</div>
-        <h5>Makeup Analysis</h5>
-        <p>Your most flattering eye, cheek, contour, mascara, liner, and lip direction. Built for bridal photos, not trend-chasing.</p>
-        <div class="board-tags">
-          <span>Eye looks</span><span>Lip shades</span><span>Product brief</span>
-        </div>
-      </article>
-      <article class="board-card">
-        <div class="board-num">06</div>
-        <h5>Capsule Bridal Styling</h5>
-        <p>Wedding-week looks &mdash; rehearsal, welcome dinner, getting ready, after-party &mdash; with outfits, jewelry, and accessories built around your palette.</p>
-        <div class="board-tags">
-          <span>4 outfits</span><span>Jewelry</span><span>Accessories</span>
-        </div>
-      </article>
-      <article class="board-card board-card-feature">
-        <div class="board-num">&starf;</div>
-        <h5>You, in every look</h5>
-        <p>The magic: each board includes photo-realistic renders of <em>your face</em> in the recommended hairstyles, colors, and looks. So you see it before you commit.</p>
-        <div class="board-tags">
-          <span>Personalized renders</span><span>Try-on previews</span>
-        </div>
-      </article>
+        <figcaption>Original sample mockup. Your final PDF is personalized from your photos and wedding details.</figcaption>
+      </figure>
+
+      <div class="deliverable-examples" aria-label="Examples of what the Wedding Day Preview includes">
+        <article class="example-card">
+          <span class="example-label">Face + makeup</span>
+          <h5>“Here is what to emphasize.”</h5>
+          <p>Face shape, feature balance, eye/lip focus, blush placement, contour notes, and the makeup finish that will photograph best.</p>
+        </article>
+        <article class="example-card">
+          <span class="example-label">Color + styling</span>
+          <h5>“Here are your best colors.”</h5>
+          <p>Your undertone, best neutrals, wedding-week palette, metal choice, lipstick family, and colors to avoid near your face.</p>
+        </article>
+        <article class="example-card">
+          <span class="example-label">Hair + skin prep</span>
+          <h5>“Bring this to your trial.”</h5>
+          <p>Most flattering hair direction, styles to skip, skin-prep priorities, and a concise checklist for your MUA and hairstylist.</p>
+        </article>
+      </div>
     </div>
   </div>
 </section>

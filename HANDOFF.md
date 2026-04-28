@@ -10,19 +10,20 @@ A direct-response landing page for a $97 digital product: a personalized AI brid
 
 - `index.html` - landing page, single static file
 - `checkout.html` - Square payment handoff page for Wedding Day Preview ($97)
+- `assets/wedding-day-preview-report.jpg` - original generated report mockup used in the landing page
 - `HANDOFF.md` - this handoff doc
 
-No external sample images are required on the live page. The hero and deliverable previews are original HTML/CSS mockups, so there are no image licensing dependencies.
+No borrowed sample images are used on the live page. The report mockup is original generated artwork, and the smaller deliverable previews are HTML/CSS mockups.
 
 ## Current Checkout
 
-`checkout.html` links to Square Payment Links:
+`checkout.html` embeds the Square Payment Link in an iframe:
 
 - Product: Wedding Day Preview
 - Price: $97.00
 - URL: `https://square.link/u/p4RSAP6I?src=embed`
 
-The checkout page opens the Square payment link in a centered popup when possible, with a normal link fallback if the popup is blocked.
+The checkout page keeps users on-site by embedding Square checkout. A fallback link appears under the iframe in case a browser blocks the embedded checkout.
 
 ## Still Needed Before Paid Traffic
 
