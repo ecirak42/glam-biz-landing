@@ -442,7 +442,7 @@
     <section class="checkout-panel">
       <div class="form-label-h">Secure payment</div>
       <h2>Pay through Square.</h2>
-      <p>Click below to complete your order in Square's secure checkout window. After payment, check your email for next-step instructions.</p>
+      <p>Click below to continue to Square's full secure checkout. After payment, check your email for next-step instructions.</p>
 
       <div class="square-pay-card">
         <div class="square-pay-top">
@@ -455,9 +455,6 @@
         <a
           id="embedded-checkout-modal-checkout-button"
           class="square-pay-btn"
-          target="_blank"
-          rel="noopener"
-          data-url="https://square.link/u/p4RSAP6I?src=embd"
           href="https://square.link/u/p4RSAP6I?src=embed"
         >Pay now</a>
       </div>
@@ -506,42 +503,11 @@
 </footer>
 
 <script>
-  function showCheckoutWindow(e) {
-    e.preventDefault();
-
-    const button = document.getElementById('embedded-checkout-modal-checkout-button');
-    const url = button.getAttribute('data-url');
-    const title = 'Square Payment Links';
-    const topWindow = window.top ? window.top : window;
-    const dualScreenLeft = topWindow.screenLeft !== undefined ? topWindow.screenLeft : topWindow.screenX;
-    const dualScreenTop = topWindow.screenTop !== undefined ? topWindow.screenTop : topWindow.screenY;
-    const width = topWindow.innerWidth || document.documentElement.clientWidth || screen.width;
-    const height = topWindow.innerHeight || document.documentElement.clientHeight || screen.height;
-    const popupHeight = height * 0.75;
-    const popupWidth = 500;
-    const systemZoom = width / topWindow.screen.availWidth;
-    const left = (width - popupWidth) / 2 / systemZoom + dualScreenLeft;
-    const top = (height - popupHeight) / 2 / systemZoom + dualScreenTop;
-    const newWindow = window.open(
-      url,
-      title,
-      `scrollbars=yes,width=${popupWidth / systemZoom},height=${popupHeight / systemZoom},top=${top},left=${left}`
-    );
-
+  document.getElementById('embedded-checkout-modal-checkout-button').addEventListener('click', () => {
     // Track payment intent (placeholder for Meta Pixel / GA4)
     // window.fbq && fbq('track', 'InitiateCheckout', { value: 97, currency: 'USD' });
     // window.gtag && gtag('event', 'begin_checkout', { value: 97, currency: 'USD' });
-
-    if (newWindow && window.focus) {
-      newWindow.focus();
-    } else {
-      window.location.href = url;
-    }
-  }
-
-  document
-    .getElementById('embedded-checkout-modal-checkout-button')
-    .addEventListener('click', showCheckoutWindow);
+  });
 </script>
 
 </body>
