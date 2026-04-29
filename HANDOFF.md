@@ -1,4 +1,4 @@
-# Aisle - Bridal Beauty Analysis Landing Page
+﻿# Aisle - Bridal Beauty Analysis Landing Page
 
 Handoff document for the current static site.
 
@@ -10,10 +10,11 @@ A direct-response landing page for a $97 digital product: a personalized AI brid
 
 - `index.html` - landing page, single static file
 - `checkout.html` - Square payment handoff page for Wedding Day Preview ($97)
-- `assets/wedding-day-preview-report.jpg` - original generated report mockup used in the landing page
+- `assets/hero-product-preview.svg` - original hero product preview graphic
+- `assets/deliverable-pages-preview.svg` - original deliverable pages preview graphic
 - `HANDOFF.md` - this handoff doc
 
-No borrowed sample images are used on the live page. The report mockup is original generated artwork, and the smaller deliverable previews are HTML/CSS mockups.
+No borrowed sample images are used on the live page. The product visuals are original SVG mockups inspired by beauty-analysis board layouts.
 
 ## Current Checkout
 
@@ -39,3 +40,4 @@ The checkout page keeps users on-site by embedding Square checkout. A fallback l
 - Main brand tokens live in the `:root` blocks of `index.html` and `checkout.html`.
 - Landing CTA links point to `checkout.html`.
 - Keep future visuals original, licensed, or client-approved.
+

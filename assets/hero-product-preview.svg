@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Wedding Day Preview product mockup</title>
+  <desc id="desc">A stylized preview of the personalized bridal beauty PDF with face, color, hair, makeup, skin, and styling pages.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fbf7f3"/>
+      <stop offset="0.55" stop-color="#f4ece3"/>
+      <stop offset="1" stop-color="#ead9ca"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#fbf7f3"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#2a2521" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="900" height="1125" rx="28" fill="url(#bg)"/>
+  <circle cx="124" cy="162" r="92" fill="#d9a7a0" opacity="0.20"/>
+  <circle cx="784" cy="964" r="130" fill="#c4a878" opacity="0.18"/>
+
+  <g filter="url(#shadow)">
+    <rect x="151" y="116" width="598" height="842" rx="20" fill="url(#paper)" stroke="#e9dfd3" stroke-width="2"/>
+    <rect x="181" y="146" width="538" height="82" rx="12" fill="#2a2521"/>
+    <text x="450" y="178" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#fbf7f3" letter-spacing="3">WEDDING DAY PREVIEW</text>
+    <text x="450" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#c4a878" letter-spacing="4">PERSONAL BEAUTY PDF</text>
+
+    <g transform="translate(209 262)">
+      <circle cx="92" cy="92" r="74" fill="#f4ece3" stroke="#e9dfd3"/>
+      <path d="M46 99c10-53 82-55 94 0-12 44-78 45-94 0z" fill="#d7a181"/>
+      <path d="M36 92c10-82 102-91 121 0-18-42-102-40-121 0z" fill="#70472f"/>
+      <circle cx="71" cy="91" r="5" fill="#2a2521"/>
+      <circle cx="113" cy="91" r="5" fill="#2a2521"/>
+      <path d="M77 124c15 11 33 11 48 0" fill="none" stroke="#8f5d49" stroke-width="4" stroke-linecap="round"/>
+      <text x="92" y="202" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#2a2521">Face Features</text>
+      <text x="92" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#6b5f54">shape, balance, feature focus</text>
+    </g>
+
+    <g transform="translate(446 270)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" fill="#b8807a" letter-spacing="2">YOUR BEST COLORS</text>
+      <rect x="0" y="22" width="62" height="86" rx="8" fill="#8c7b3e"/>
+      <rect x="74" y="22" width="62" height="86" rx="8" fill="#c96f45"/>
+      <rect x="148" y="22" width="62" height="86" rx="8" fill="#d5b58a"/>
+      <rect x="222" y="22" width="62" height="86" rx="8" fill="#6e5946"/>
+      <rect x="0" y="132" width="284" height="10" rx="5" fill="#e9dfd3"/>
+      <rect x="0" y="156" width="230" height="10" rx="5" fill="#e9dfd3"/>
+      <rect x="0" y="180" width="258" height="10" rx="5" fill="#e9dfd3"/>
+    </g>
+
+    <g transform="translate(198 554)">
+      <rect width="504" height="2" fill="#e9dfd3"/>
+      <text x="252" y="42" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#2a2521">Inside your report</text>
+      <g transform="translate(0 70)">
+        <rect width="150" height="138" rx="12" fill="#fbf7f3" stroke="#e9dfd3"/>
+        <text x="75" y="42" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#2a2521">Hair</text>
+        <path d="M42 82c20-38 50-38 70 0" fill="none" stroke="#70472f" stroke-width="10" stroke-linecap="round"/>
+        <text x="75" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b5f54">best styles</text>
+      </g>
+      <g transform="translate(177 70)">
+        <rect width="150" height="138" rx="12" fill="#fbf7f3" stroke="#e9dfd3"/>
+        <text x="75" y="42" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#2a2521">Makeup</text>
+        <circle cx="56" cy="80" r="18" fill="#c77c68"/>
+        <circle cx="94" cy="80" r="18" fill="#9c6044"/>
+        <text x="75" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b5f54">eyes + lips</text>
+      </g>
+      <g transform="translate(354 70)">
+        <rect width="150" height="138" rx="12" fill="#fbf7f3" stroke="#e9dfd3"/>
+        <text x="75" y="42" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#2a2521">Style</text>
+        <path d="M54 98l21-48 21 48z" fill="#8fa08c"/>
+        <text x="75" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b5f54">wedding week</text>
+      </g>
+    </g>
+
+    <g transform="translate(198 838)">
+      <rect width="504" height="58" rx="12" fill="#f4ece3" stroke="#e9dfd3"/>
+      <text x="24" y="36" font-family="Arial, sans-serif" font-size="15" fill="#2a2521">Delivered as a shareable PDF for your MUA, stylist, and planner</text>
+    </g>
+  </g>
+</svg>
