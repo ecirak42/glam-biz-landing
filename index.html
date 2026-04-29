@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aisle &mdash; Your Personal AI Bridal Beauty Analysis</title>
-<meta name="description" content="Upload a few photos. Get a personalized wedding beauty plan &mdash; makeup, hair, colors, styling &mdash; built around your features and your dress. Delivered in 24 hours." />
-<meta property="og:title" content="Aisle &mdash; Know exactly how to look your most beautiful on your wedding day." />
-<meta property="og:description" content="Personalized AI bridal beauty analysis. Your perfect makeup, hair, and color palette &mdash; mapped to your face and your dress." />
+<title>Aisle &mdash; Your Bridal Beauty Plan Before the Trial</title>
+<meta name="description" content="Upload a few photos and get a personalized bridal beauty plan for makeup, hair, colors, skin prep, and trial notes. Delivered in 24 hours." />
+<meta property="og:title" content="Aisle &mdash; Your bridal beauty plan before the trial." />
+<meta property="og:description" content="A personalized PDF with makeup, hair, colors, skin prep, and trial notes mapped to your features, dress, and wedding vision." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -722,6 +722,31 @@
     line-height: 1.6;
   }
 
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 48px;
+  }
+  .trust-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 26px 24px;
+    box-shadow: var(--shadow);
+  }
+  .trust-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .trust-card p {
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
   /* FAQ */
   .faq {
     max-width: 760px;
@@ -829,6 +854,7 @@
     .steps { grid-template-columns: 1fr; gap: 48px; }
     .boards { grid-template-columns: 1fr; gap: 14px; }
     .deliverable-examples { grid-template-columns: 1fr; }
+    .trust-grid { grid-template-columns: 1fr; }
     section { padding: 64px 0; }
     .final-cta { padding: 80px 24px; }
     .nav-cta { padding: 8px 16px; font-size: 13px; }
@@ -851,14 +877,14 @@
 
 <!-- ANNOUNCEMENT -->
 <div class="announce">
-  Limited spots this week &nbsp;&middot;&nbsp; <strong>$97</strong> &nbsp;&middot;&nbsp; Delivered in 24 hours
+  Personalized bridal beauty plan &nbsp;&middot;&nbsp; <strong>$97</strong> &nbsp;&middot;&nbsp; Delivered in 24 hours
 </div>
 
 <!-- NAV -->
 <nav>
   <div class="container nav-row">
     <a href="#" class="logo">Aisle<span>.</span></a>
-    <a href="#buy" class="nav-cta">Get my analysis</a>
+    <a href="#buy" class="nav-cta">Get my plan</a>
   </div>
 </nav>
 
@@ -866,16 +892,16 @@
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="eyebrow">For brides-to-be</div>
+      <div class="eyebrow">Before your hair and makeup trial</div>
       <h1 class="serif hero-h">
-        Know exactly how to look <span class="accent">your most beautiful</span> on your wedding day.
+        Get a bridal beauty plan <span class="accent">before the trial.</span>
       </h1>
       <p class="hero-sub">
-        Upload a few photos. Get a personalized AI bridal beauty analysis &mdash; your perfect makeup, hair, colors, and styling, mapped to your features and your dress. So you walk down the aisle certain, not guessing.
+        Upload a few photos and wedding details. Receive a personalized PDF with makeup direction, hair ideas, color guidance, skin-prep notes, and a clear brief you can send to your beauty team.
       </p>
-      <a href="#buy" class="btn btn-large">Get my bridal analysis &mdash; $97 &rarr;</a>
+      <a href="#buy" class="btn btn-large">Get my bridal beauty plan &mdash; $97 &rarr;</a>
       <div class="btn-meta">
-        <strong>Delivered in 24 hours.</strong> &nbsp;&middot;&nbsp; 100% personalized &nbsp;&middot;&nbsp; Loved-it guarantee
+        <strong>Delivered in 24 hours.</strong> &nbsp;&middot;&nbsp; Personalized PDF &nbsp;&middot;&nbsp; Secure checkout
       </div>
       <div class="hero-trust">
         <div class="stars-text"><strong>Personalized PDF.</strong> Built from your photos, dress, and wedding-day vision.</div>
@@ -884,11 +910,11 @@
 
     <div class="hero-visual">
       <div class="hero-photo">
-        <img class="hero-preview-img" src="assets/wedding-day-preview-report.jpg" alt="Sample Wedding Day Preview PDF with beauty analysis boards" />
+        <img class="hero-preview-img" src="assets/aisle-bridal-plan-preview.png" alt="Sample bridal beauty plan PDF with face, color, hair, makeup, skin, and trial notes" />
       </div>
 
       <div class="analysis-card">
-        <div class="analysis-card-title">The PDF includes</div>
+        <div class="analysis-card-title">Plan includes</div>
         <div class="analysis-row">
           <span class="analysis-row-key">Face + features</span>
           <span class="analysis-row-val">Mapped</span>
@@ -902,7 +928,7 @@
           <span class="analysis-row-val">Trial-ready</span>
         </div>
         <div class="analysis-row">
-          <span class="analysis-row-key">Includes</span>
+          <span class="analysis-row-key">Delivery</span>
           <span class="analysis-row-val">
             24 hr delivery
           </span>
@@ -925,37 +951,37 @@
 <section class="section-bg-alt">
   <div class="container-narrow">
     <div class="section-eyebrow">The bride's dilemma</div>
-    <h2 class="section-h">You've been on Pinterest until 2 AM. Again.</h2>
-    <p class="section-sub">There are 18 months of saved pins. There are 47 hairstyles you love. And there's still no answer to one simple question: <em>what will look best on me?</em></p>
+    <h2 class="section-h">Inspiration is easy. Direction is harder.</h2>
+    <p class="section-sub">Saved looks can show what you like, but they rarely answer the question that matters before the trial: <em>what will actually flatter me?</em></p>
   </div>
   <div class="container">
     <div class="problem-grid">
       <div class="problem-item">
         <div class="problem-item-icon">i</div>
         <div>
-          <h4>The Pinterest paradox</h4>
-          <p>Every look you save is beautiful on someone else. None of them tell you whether they'll work for your face shape, your skin, your hair, your dress.</p>
+          <h4>The inspiration gap</h4>
+          <p>Every look you save is beautiful on someone else. None of them explain how it will translate to your face, coloring, hair, dress, or venue light.</p>
         </div>
       </div>
       <div class="problem-item">
         <div class="problem-item-icon">ii</div>
         <div>
-          <h4>Trial-and-error gets expensive</h4>
-          <p>$200 makeup trial. $150 hair trial. And you walk out unsure. Multiply by two or three until something feels right &mdash; if it ever does.</p>
+          <h4>The trial should have a starting point</h4>
+          <p>Hair and makeup trials go better when you arrive with language, priorities, and guardrails instead of asking your artist to interpret a folder of mixed references.</p>
         </div>
       </div>
       <div class="problem-item">
         <div class="problem-item-icon">iii</div>
         <div>
-          <h4>Your MUA needs direction</h4>
-          <p>Even the best makeup artists work better with a clear brief. Saying &ldquo;natural but glam&rdquo; isn't enough &mdash; and you shouldn't have to guess.</p>
+          <h4>Your beauty team needs a clearer brief</h4>
+          <p>&ldquo;Natural but glam&rdquo; can mean a dozen different things. A clear plan helps your MUA and hairstylist understand the version that fits you.</p>
         </div>
       </div>
       <div class="problem-item">
         <div class="problem-item-icon">iv</div>
         <div>
-          <h4>The quiet fear</h4>
-          <p>Looking back at your photos &mdash; the photos &mdash; and feeling like you don't quite recognize yourself. Like you should have known better.</p>
+          <h4>You still want to look like you</h4>
+          <p>The goal is not a transformation you barely recognize. It is a polished wedding-day version of your own features, coloring, and personal style.</p>
         </div>
       </div>
     </div>
@@ -966,25 +992,25 @@
 <section>
   <div class="container-narrow">
     <div class="section-eyebrow">How it works</div>
-    <h2 class="section-h">Your AI bridal beauty consultant.</h2>
-    <p class="section-sub">Built for the most photographed day of your life. Trained on color theory, face mapping, bridal styling, and what actually photographs well.</p>
+    <h2 class="section-h">From your photos to a trial-ready plan.</h2>
+    <p class="section-sub">Aisle looks at the details that shape your wedding look: face shape, undertone, hair texture, skin finish, dress neckline, and overall style direction.</p>
   </div>
   <div class="container">
     <div class="steps">
       <div class="step">
         <div class="step-num"></div>
         <h4>Upload</h4>
-        <p>A few clear photos of you. A photo of your dress, if you have it. Your venue vibe, if you'd like.</p>
+        <p>A few clear photos of you, your dress if you have it, and any wedding details that shape the vibe.</p>
       </div>
       <div class="step">
         <div class="step-num"></div>
         <h4>Analyze</h4>
-        <p>Our AI reads your face shape, undertone, eye color, hair texture, dress neckline, and aesthetic.</p>
+        <p>Your features, coloring, hair, skin, dress, and preferences are translated into practical beauty direction.</p>
       </div>
       <div class="step">
         <div class="step-num"></div>
         <h4>Receive</h4>
-        <p>A complete personalized wedding look plan. Delivered to your inbox within 24 hours.</p>
+        <p>A polished PDF with notes you can save, print, or forward to your makeup artist and hairstylist.</p>
       </div>
     </div>
   </div>
@@ -994,47 +1020,47 @@
 <section class="section-bg-alt">
   <div class="container-narrow">
     <div class="section-eyebrow">What lands in your inbox</div>
-    <h2 class="section-h">One personalized PDF with the decisions already narrowed down.</h2>
-    <p class="section-sub">Your report is built to answer the questions that usually make bridal beauty feel overwhelming: what flatters you, what to ask for, what to avoid, and what to send to your beauty team.</p>
+    <h2 class="section-h">A personalized PDF you can actually use at the trial.</h2>
+    <p class="section-sub">Not a pile of inspo. A calm, organized beauty plan that helps you explain what you want, what suits you, and what to avoid before the wedding pressure kicks in.</p>
   </div>
   <div class="container">
     <figure class="deliverable-image">
       <div class="deliverable-image-frame">
-        <img src="assets/wedding-day-preview-report.jpg" alt="Sample Wedding Day Preview report showing beauty analysis boards" />
+        <img src="assets/aisle-bridal-plan-preview.png" alt="Sample bridal beauty plan PDF showing face, hair, makeup, color, skin, and trial notes pages" />
       </div>
       <figcaption>Original sample mockup. Your final PDF is personalized from your photos, coloring, hair, dress, and wedding details.</figcaption>
     </figure>
 
-    <div class="deliverable-examples" aria-label="Examples of what the Wedding Day Preview includes">
+    <div class="deliverable-examples" aria-label="Examples of what the Aisle bridal beauty plan includes">
       <article class="example-card">
-        <span class="example-label">Face analysis</span>
-        <h5>Your best emphasis points</h5>
-        <p>Face shape, feature balance, eye/lip focus, blush placement, contour notes, and what will photograph most harmoniously.</p>
+        <span class="example-label">Show your MUA</span>
+        <h5>A clearer makeup brief</h5>
+        <p>Eye focus, skin finish, cheek placement, lip family, lash direction, and notes for keeping the look polished but still like you.</p>
       </article>
       <article class="example-card">
-        <span class="example-label">Color plan</span>
-        <h5>Your best palette</h5>
-        <p>Undertone, season, best neutrals, wedding-week colors, metal choice, lipstick family, and shades to avoid near your face.</p>
+        <span class="example-label">Bring to hair trial</span>
+        <h5>Better hair direction</h5>
+        <p>Most flattering silhouettes, parting notes, volume placement, veil/accessory considerations, and styles worth skipping.</p>
       </article>
       <article class="example-card">
-        <span class="example-label">Hair direction</span>
-        <h5>Styles to try and skip</h5>
-        <p>Most flattering silhouettes, parting notes, volume placement, veil/accessory direction, and less flattering options to avoid.</p>
+        <span class="example-label">Choose colors</span>
+        <h5>A wedding-week palette</h5>
+        <p>Best near-face colors, neutrals, metals, lipstick families, and shades that may read too harsh, dull, or cool for you.</p>
       </article>
       <article class="example-card">
-        <span class="example-label">Makeup plan</span>
-        <h5>A clear glam brief</h5>
-        <p>Eye shadow families, liner style, lash direction, cheek placement, lip tones, skin finish, and product-style notes.</p>
+        <span class="example-label">Avoid the wrong turns</span>
+        <h5>Specific no-thank-yous</h5>
+        <p>Less flattering hair shapes, color choices, makeup finishes, or styling details, with the reason they may not serve your look.</p>
       </article>
       <article class="example-card">
-        <span class="example-label">Skin prep</span>
-        <h5>Wedding-week priorities</h5>
-        <p>A simple prep direction based on shine, dryness, texture, pores, redness, or sensitivity, with a gentle-not-risky focus.</p>
+        <span class="example-label">Prep calmly</span>
+        <h5>Skin priorities</h5>
+        <p>A simple direction based on shine, dryness, texture, pores, redness, or sensitivity, with a gentle-not-risky wedding-week focus.</p>
       </article>
       <article class="example-card">
-        <span class="example-label">Styling notes</span>
-        <h5>Shareable trial direction</h5>
-        <p>Plain-language notes you can forward to your makeup artist, hairstylist, planner, or tailor before the trial.</p>
+        <span class="example-label">Send the plan</span>
+        <h5>Notes for your team</h5>
+        <p>Plain-language trial notes you can forward to your makeup artist, hairstylist, planner, or tailor so everyone starts aligned.</p>
       </article>
     </div>
   </div>
@@ -1076,7 +1102,31 @@
     <div class="guarantee">
       <div class="guarantee-seal">Loved-it<br/>guarantee</div>
       <h3 class="serif">Love it, or your money back.</h3>
-      <p>Don't love your analysis? Tell us why &mdash; we'll redo it with a senior beauty director on our team. Still don't love it? Full refund within 14 days. No forms, no friction. We only want this in the hands of brides it actually serves.</p>
+      <p>If the plan feels off, tell us what missed the mark and we'll revise it once. Still not right? Full refund within 14 days. No forms, no friction.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container-narrow">
+    <div class="section-eyebrow">Private by design</div>
+    <h2 class="section-h">Your photos are for your plan, not our marketing.</h2>
+    <p class="section-sub">This product asks for personal photos, so the trust bar has to be higher than a normal checkout page.</p>
+  </div>
+  <div class="container">
+    <div class="trust-grid">
+      <article class="trust-card">
+        <h4>Your images stay private</h4>
+        <p>Your uploaded photos are used to create your plan. They are not posted publicly, used as client examples, or shared as before-and-after content.</p>
+      </article>
+      <article class="trust-card">
+        <h4>Original sample visuals</h4>
+        <p>The preview images on this page are mockups, not client work. Your final PDF is made from your own photos and wedding details.</p>
+      </article>
+      <article class="trust-card">
+        <h4>You can request deletion</h4>
+        <p>After delivery, you can ask us to delete the photos and details you submitted for your bridal beauty plan.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -1090,20 +1140,20 @@
   <div class="container">
     <div class="faq">
       <div class="faq-item">
-        <button class="faq-q">How does the AI actually work? <span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><p>We combine computer vision cues (face shape, undertone, feature mapping, hair texture) with bridal styling guidance, color theory, and what photographs well in real wedding lighting. The result is formatted into a clear PDF brief you can use for your trial.</p></div>
+        <button class="faq-q">How does the plan get made? <span class="faq-q-icon">+</span></button>
+        <div class="faq-a"><p>We combine photo-based cues like face shape, undertone, feature balance, and hair texture with bridal styling guidance, color theory, and what photographs well in real wedding lighting. The result is formatted into a clear PDF brief you can use for your trial.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">How personalized is it? <span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><p>Your report is built from the photos and details you provide: your face shape, coloring, hair texture, dress, venue, and overall wedding-day direction. If it ever feels off, our redo + refund policy has you covered.</p></div>
+        <div class="faq-a"><p>Your plan is built from the photos and details you provide: your face shape, coloring, hair texture, dress, venue, and overall wedding-day direction. If it ever feels off, our redo + refund policy has you covered.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">What photos should I upload? <span class="faq-q-icon">+</span></button>
         <div class="faq-a"><p>3&ndash;5 clear photos of you in natural light, ideally without filters or heavy makeup. A photo of your dress (or a dress you're considering), if available. A reference photo of your venue or vibe is helpful but optional.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">When will I get my analysis? <span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><p>Within 24 hours of upload, delivered to your inbox as a beautifully formatted PDF mood board you can save, print, and share with your makeup artist and stylist.</p></div>
+        <button class="faq-q">When will I get my plan? <span class="faq-q-icon">+</span></button>
+        <div class="faq-a"><p>Within 24 hours of upload, delivered to your inbox as a formatted PDF you can save, print, and share with your makeup artist and stylist.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Can I share it with my MUA and hairstylist? <span class="faq-q-icon">+</span></button>
@@ -1111,11 +1161,11 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Is my data and my photos private? <span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><p>Always. Your photos are encrypted, never shared, never used to train public models, and deleted within 30 days of delivery if you wish.</p></div>
+        <div class="faq-a"><p>Your photos are used to create your plan, not to market the service. They are not posted publicly or used as client examples, and you can request deletion after delivery.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">What if I don't love the analysis? <span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><p>Tell us why &mdash; we'll redo it. Still not right? Full refund within 14 days. No questions, no forms, no friction.</p></div>
+        <button class="faq-q">What if I don't love the plan? <span class="faq-q-icon">+</span></button>
+        <div class="faq-a"><p>Tell us what felt off and we'll revise it once. Still not right? Full refund within 14 days. No forms, no friction.</p></div>
       </div>
     </div>
   </div>
@@ -1124,8 +1174,8 @@
 <!-- FINAL CTA -->
 <section class="final-cta" id="buy">
   <h2 class="serif">Walk down the aisle <span class="accent">certain</span>.</h2>
-  <p>The most photographed day of your life deserves more than a saved Pinterest board. Get your personalized bridal beauty analysis today.</p>
-  <a href="checkout.html" class="btn btn-large">Get my bridal analysis &mdash; $97 &rarr;</a>
+  <p>The most photographed day of your life deserves more than a saved Pinterest board. Get your personalized bridal beauty plan before the trial.</p>
+  <a href="checkout.html" class="btn btn-large">Get my bridal beauty plan &mdash; $97 &rarr;</a>
   <div class="btn-meta" style="color: var(--bg-alt); margin-top: 18px;">
     <strong style="color: var(--bg);">Delivered in 24 hours.</strong> &nbsp;&middot;&nbsp; Loved-it guarantee &nbsp;&middot;&nbsp; Secure checkout
   </div>
