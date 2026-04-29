@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Frame & Vow - Wedding Look Camera Audit</title>
+<meta name="description" content="A camera-readiness audit for your wedding hair, makeup, colors, skin finish, and styling direction. Delivered as a personalized PDF in 24 hours." />
+<meta property="og:title" content="Frame & Vow - Make sure your wedding look works on camera." />
+<meta property="og:description" content="Get a personalized wedding look audit before your hair and makeup trial." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #111111;
+    --soft-ink: #4b4744;
+    --paper: #f7f1e8;
+    --paper-2: #eee2d4;
+    --white: #fffdf8;
+    --line: #d7c7b6;
+    --acid: #d7f250;
+    --coral: #ff715b;
+    --sky: #8ccbd4;
+    --mauve: #a87e92;
+    --graphite: #24211f;
+    --shadow: 0 24px 70px rgba(17, 17, 17, 0.16);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  .wrap { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+  .serif { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; }
+
+  .notice {
+    background: var(--acid);
+    color: var(--ink);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 12px;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: rgba(247, 241, 232, 0.9);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(16px);
+  }
+  .nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .brand {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .brand-mark {
+    width: 38px;
+    height: 28px;
+    border: 2px solid var(--ink);
+    border-radius: 50%;
+    position: relative;
+  }
+  .brand-mark::before {
+    content: "";
+    position: absolute;
+    inset: 7px 12px;
+    border-radius: 50%;
+    background: var(--coral);
+  }
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 0 18px;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .hero {
+    min-height: calc(100vh - 110px);
+    display: grid;
+    align-items: center;
+    padding: 64px 0;
+    overflow: hidden;
+    background:
+      linear-gradient(90deg, rgba(215,242,80,0.16), transparent 26%),
+      radial-gradient(circle at 86% 16%, rgba(140,203,212,0.34), transparent 28%),
+      var(--paper);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(460px, 1.08fr);
+    gap: 56px;
+    align-items: center;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 34px;
+    height: 10px;
+    background: var(--coral);
+    border-radius: 999px;
+  }
+  h1 {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: clamp(58px, 8vw, 114px);
+    line-height: 0.82;
+    letter-spacing: 0;
+    font-weight: 400;
+    max-width: 680px;
+  }
+  .hero-copy {
+    font-size: 20px;
+    color: var(--soft-ink);
+    margin: 30px 0 34px;
+    max-width: 610px;
+  }
+  .button-row {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .btn {
+    display: inline-flex;
+    min-height: 58px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 28px;
+    border-radius: 999px;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+    font-weight: 800;
+    border: 2px solid var(--ink);
+    box-shadow: 0 16px 30px rgba(17,17,17,0.17);
+    transition: transform 0.2s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn.secondary {
+    background: transparent;
+    color: var(--ink);
+    box-shadow: none;
+  }
+  .subnote {
+    color: var(--soft-ink);
+    font-size: 13px;
+    margin-top: 16px;
+  }
+
+  .camera-card {
+    position: relative;
+    min-height: 600px;
+    display: grid;
+    place-items: center;
+  }
+  .photo-window {
+    width: min(100%, 700px);
+    aspect-ratio: 1.08 / 1;
+    background: var(--graphite);
+    border: 2px solid var(--ink);
+    border-radius: 26px;
+    padding: 18px;
+    box-shadow: var(--shadow);
+    transform: rotate(-1.5deg);
+  }
+  .photo-inner {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--ink);
+  }
+  .photo-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 69% center;
+    opacity: 0.88;
+    filter: saturate(0.88) contrast(1.04);
+  }
+  .focus-box {
+    position: absolute;
+    inset: 12%;
+    border: 2px solid var(--acid);
+    border-radius: 8px;
+    box-shadow: 0 0 0 999px rgba(17,17,17,0.24);
+  }
+  .scan-line {
+    position: absolute;
+    left: 7%;
+    right: 7%;
+    top: 48%;
+    height: 2px;
+    background: var(--acid);
+    box-shadow: 0 0 20px rgba(215,242,80,0.9);
+  }
+  .result-card {
+    position: absolute;
+    right: -8px;
+    bottom: 54px;
+    width: 260px;
+    border: 2px solid var(--ink);
+    background: var(--white);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 12px 12px 0 var(--acid);
+  }
+  .result-card span {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .meter {
+    margin: 14px 0;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--paper-2);
+    overflow: hidden;
+  }
+  .meter i {
+    display: block;
+    width: 78%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--coral), var(--acid));
+  }
+  .result-card p {
+    color: var(--soft-ink);
+    font-size: 13px;
+  }
+  .side-note {
+    position: absolute;
+    top: 54px;
+    left: -10px;
+    width: 214px;
+    background: var(--sky);
+    border: 2px solid var(--ink);
+    border-radius: 18px;
+    padding: 16px;
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: 10px 10px 0 rgba(17,17,17,0.12);
+  }
+
+  .ticker {
+    overflow: hidden;
+    background: var(--ink);
+    color: var(--paper);
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+  }
+  .ticker-track {
+    display: flex;
+    width: max-content;
+    animation: move 30s linear infinite;
+  }
+  .ticker span {
+    padding: 18px 26px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  @keyframes move {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  section { padding: 90px 0; }
+  .section-head {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 46px;
+    align-items: end;
+    margin-bottom: 44px;
+  }
+  .section-head h2 {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: clamp(46px, 5.4vw, 82px);
+    line-height: 0.88;
+    font-weight: 400;
+  }
+  .section-head p {
+    color: var(--soft-ink);
+    font-size: 18px;
+    max-width: 620px;
+  }
+
+  .black {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .black .section-head p { color: #d8cec3; }
+  .black .eyebrow::before { background: var(--acid); }
+  .risk-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .risk {
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 20px;
+    padding: 26px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255,255,255,0.04);
+  }
+  .risk strong {
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    color: var(--acid);
+    text-transform: uppercase;
+  }
+  .risk h3 {
+    margin: 24px 0 10px;
+    font-size: 26px;
+    line-height: 1.08;
+  }
+  .risk p {
+    color: #d8cec3;
+    font-size: 15px;
+    margin-top: auto;
+  }
+
+  .audit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 2px solid var(--ink);
+    background: var(--white);
+  }
+  .audit {
+    padding: 30px;
+    min-height: 265px;
+    border-right: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+  }
+  .audit:nth-child(2n) { border-right: none; }
+  .audit:nth-last-child(-n+2) { border-bottom: none; }
+  .audit-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 86px;
+    min-height: 32px;
+    background: var(--acid);
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 22px;
+  }
+  .audit h3 {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: 42px;
+    line-height: 0.92;
+    font-weight: 400;
+    margin-bottom: 14px;
+  }
+  .audit p {
+    color: var(--soft-ink);
+    max-width: 460px;
+  }
+  .audit:nth-child(2) .audit-label { background: var(--coral); }
+  .audit:nth-child(3) .audit-label { background: var(--sky); }
+  .audit:nth-child(4) .audit-label { background: var(--mauve); color: var(--white); }
+
+  .deliver {
+    background: var(--paper-2);
+  }
+  .deliver-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.78fr;
+    gap: 38px;
+    align-items: stretch;
+  }
+  .report-shot {
+    border: 2px solid var(--ink);
+    border-radius: 26px;
+    background: var(--white);
+    padding: 14px;
+    box-shadow: 18px 18px 0 var(--coral);
+  }
+  .report-shot img {
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    max-height: 620px;
+    object-fit: cover;
+    object-position: right center;
+  }
+  .deliver-list {
+    display: grid;
+    gap: 12px;
+  }
+  .deliver-item {
+    background: var(--white);
+    border: 2px solid var(--ink);
+    border-radius: 18px;
+    padding: 20px;
+  }
+  .deliver-item b {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .deliver-item span {
+    color: var(--soft-ink);
+    font-size: 14px;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .step {
+    background: var(--white);
+    border: 2px solid var(--ink);
+    border-radius: 22px;
+    padding: 26px;
+    min-height: 230px;
+    box-shadow: 10px 10px 0 rgba(17,17,17,0.08);
+  }
+  .step-num {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 50%;
+    font-weight: 800;
+    margin-bottom: 24px;
+  }
+  .step h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .step p {
+    color: var(--soft-ink);
+  }
+
+  .final {
+    background:
+      linear-gradient(135deg, rgba(215,242,80,0.16), transparent 35%),
+      var(--ink);
+    color: var(--paper);
+  }
+  .final-panel {
+    display: grid;
+    grid-template-columns: 1fr 330px;
+    gap: 36px;
+    align-items: center;
+  }
+  .final h2 {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: clamp(52px, 6.2vw, 94px);
+    line-height: 0.82;
+    font-weight: 400;
+    max-width: 760px;
+  }
+  .final p {
+    color: #d8cec3;
+    font-size: 18px;
+    max-width: 610px;
+    margin-top: 24px;
+  }
+  .checkout-box {
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 26px;
+    border: 2px solid var(--ink);
+    padding: 26px;
+    box-shadow: 14px 14px 0 var(--acid);
+  }
+  .checkout-box span {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .price {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: 86px;
+    line-height: 0.95;
+    margin: 10px 0;
+  }
+  .checkout-box p {
+    color: var(--soft-ink);
+    font-size: 14px;
+    margin: 0 0 20px;
+  }
+  .checkout-box .btn { width: 100%; box-shadow: none; }
+
+  footer {
+    background: var(--ink);
+    color: #bdb1a5;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding: 30px 0;
+    font-size: 13px;
+  }
+  .footer-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  footer a { color: var(--paper); text-decoration: none; margin-left: 18px; }
+
+  @media (max-width: 960px) {
+    .hero-grid,
+    .section-head,
+    .deliver-grid,
+    .final-panel {
+      grid-template-columns: 1fr;
+    }
+    .camera-card { min-height: 520px; }
+    .risk-grid,
+    .steps {
+      grid-template-columns: 1fr;
+    }
+    .audit-grid { grid-template-columns: 1fr; }
+    .audit,
+    .audit:nth-child(2n),
+    .audit:nth-last-child(-n+2) {
+      border-right: none;
+      border-bottom: 2px solid var(--ink);
+    }
+    .audit:last-child { border-bottom: none; }
+  }
+  @media (max-width: 620px) {
+    .wrap { width: min(100% - 28px, 1160px); }
+    .brand { font-size: 14px; }
+    .hero { min-height: auto; padding: 48px 0 58px; }
+    .hero-grid { gap: 34px; }
+    .button-row .btn { width: 100%; }
+    .camera-card { min-height: auto; display: block; }
+    .photo-window { transform: none; padding: 10px; border-radius: 18px; }
+    .side-note,
+    .result-card {
+      position: static;
+      width: auto;
+      margin-top: 12px;
+    }
+    .result-card { box-shadow: 8px 8px 0 var(--acid); }
+    .side-note { box-shadow: 8px 8px 0 rgba(17,17,17,0.12); }
+    section { padding: 66px 0; }
+    .audit,
+    .deliver-item,
+    .step,
+    .checkout-box {
+      border-radius: 16px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="notice">A camera-readiness audit for the look you will wear in every photo</div>
+
+  <header>
+    <nav class="wrap nav" aria-label="Primary navigation">
+      <a class="brand" href="#">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Frame &amp; Vow</span>
+      </a>
+      <a class="nav-cta" href="#buy">Get audited</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Wedding look camera audit</div>
+          <h1>Pretty in person is not the same as photo-ready.</h1>
+          <p class="hero-copy">Frame &amp; Vow is a personalized pre-trial audit for your wedding hair, makeup, colors, skin finish, and styling direction, built around how your look will read on camera.</p>
+          <div class="button-row">
+            <a class="btn" href="#buy">Audit my wedding look - $97</a>
+            <a class="btn secondary" href="#audit">See what gets checked</a>
+          </div>
+          <p class="subnote">Delivered within 24 hours as a PDF you can send to your makeup artist, hairstylist, or planner.</p>
+        </div>
+
+        <div class="camera-card" aria-label="Camera-readiness audit preview">
+          <div class="photo-window">
+            <div class="photo-inner">
+              <img src="../assets/wedding-day-preview-report.jpg" alt="Sample wedding look audit report pages" />
+              <div class="focus-box" aria-hidden="true"></div>
+              <div class="scan-line" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="side-note">Checks the look against your face, dress, lighting, color, and photo goals.</div>
+          <div class="result-card">
+            <span>Camera-readiness score</span>
+            <div class="meter" aria-hidden="true"><i></i></div>
+            <p>Clearer direction before the trial. Fewer surprises after the gallery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Face balance</span><span>Skin finish</span><span>Color cast</span><span>Hair silhouette</span><span>Flashback risk</span><span>Dress harmony</span><span>Trial notes</span><span>Photo confidence</span>
+        <span>Face balance</span><span>Skin finish</span><span>Color cast</span><span>Hair silhouette</span><span>Flashback risk</span><span>Dress harmony</span><span>Trial notes</span><span>Photo confidence</span>
+      </div>
+    </div>
+
+    <section class="black">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Why this angle</div>
+            <h2>Your wedding look has to survive a camera.</h2>
+          </div>
+          <p>This brand goes after the scarier, more specific fear: not that you will look bad, but that the look you picked will not translate in your ceremony light, close-ups, flash photos, dress neckline, or final gallery.</p>
+        </div>
+        <div class="risk-grid">
+          <article class="risk">
+            <strong>Risk 01</strong>
+            <h3>The makeup reads heavier than you meant.</h3>
+            <p>The audit gives guardrails for finish, contrast, lashes, liner, cheeks, and lips so "soft glam" stays recognizable.</p>
+          </article>
+          <article class="risk">
+            <strong>Risk 02</strong>
+            <h3>Your colors fight the lighting.</h3>
+            <p>Some tones look beautiful in a palette but pull dull, icy, orange, or harsh near your face and dress.</p>
+          </article>
+          <article class="risk">
+            <strong>Risk 03</strong>
+            <h3>The hair shape collapses on camera.</h3>
+            <p>Volume, parting, face-framing pieces, and accessory placement matter more once the look is flattened into photos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="audit">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">The audit</div>
+            <h2>Five checks before anyone touches your hair.</h2>
+          </div>
+          <p>You upload your photos and wedding details. The audit turns them into a direct, usable brief for the choices that affect the final image: face, color, hair shape, makeup finish, and styling harmony.</p>
+        </div>
+        <div class="audit-grid">
+          <article class="audit">
+            <span class="audit-label">Face</span>
+            <h3>Feature balance</h3>
+            <p>What to emphasize, where to soften, and how to keep the look balanced in close-up portraits.</p>
+          </article>
+          <article class="audit">
+            <span class="audit-label">Color</span>
+            <h3>Tone control</h3>
+            <p>Best near-face shades, lip families, metals, and colors that could photograph too harsh or flat.</p>
+          </article>
+          <article class="audit">
+            <span class="audit-label">Hair</span>
+            <h3>Shape on camera</h3>
+            <p>Silhouette, volume, parting, texture, and face-framing choices that hold up in photos.</p>
+          </article>
+          <article class="audit">
+            <span class="audit-label">Finish</span>
+            <h3>Skin and makeup read</h3>
+            <p>Guidance for glow, powder, blush, liner, lash, and lip intensity so the final look feels intentional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="deliver">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">The PDF</div>
+            <h2>A photo-first brief for your beauty team.</h2>
+          </div>
+          <p>This is not a mood board dump. It is a structured wedding look audit with specific yes/no direction your team can use at the trial.</p>
+        </div>
+        <div class="deliver-grid">
+          <div class="report-shot">
+            <img src="../assets/wedding-day-preview-report.jpg" alt="Original sample report pages used to illustrate the PDF deliverable" />
+          </div>
+          <div class="deliver-list">
+            <div class="deliver-item"><b>Camera-readiness summary</b><span>The clearest read on what will help your look photograph beautifully.</span></div>
+            <div class="deliver-item"><b>Best and avoid lists</b><span>Hair shapes, colors, makeup finishes, and styling choices worth asking for or skipping.</span></div>
+            <div class="deliver-item"><b>Trial script</b><span>Plain-language notes to send or bring to your MUA and hairstylist.</span></div>
+            <div class="deliver-item"><b>Wedding-week guardrails</b><span>Skin and product direction focused on calm, not risky last-minute experiments.</span></div>
+            <div class="deliver-item"><b>Private, original sample</b><span>No borrowed client examples. Your final PDF is built from your own photos and details.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">The flow</div>
+            <h2>Fast enough to use before the trial.</h2>
+          </div>
+          <p>The product is framed as a practical intervention: buy it when the trial is coming up and you want a clearer starting point.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="step-num">1</div>
+            <h3>Send photos</h3>
+            <p>Clear photos of you, your dress if available, and the wedding setting or style direction.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">2</div>
+            <h3>Get audited</h3>
+            <p>Your look is checked for face balance, color harmony, skin finish, hair silhouette, and photo-readiness.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">3</div>
+            <h3>Bring the brief</h3>
+            <p>Use the PDF to guide your trial and reduce vague, stressful, last-minute decisions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final" id="buy">
+      <div class="wrap final-panel">
+        <div>
+          <div class="eyebrow">Frame the look first</div>
+          <h2>Make the trial feel less like a gamble.</h2>
+          <p>For $97, get a personalized wedding look camera audit delivered in 24 hours as a PDF brief for your beauty team.</p>
+        </div>
+        <aside class="checkout-box" aria-label="Checkout summary">
+          <span>Wedding Look Audit</span>
+          <div class="price">$97</div>
+          <p>Secure checkout through the same Wedding Day Preview payment page.</p>
+          <a class="btn" href="../checkout.html">Start secure checkout</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>&copy; 2026 Frame &amp; Vow. A concept brand for wedding look camera audits.</span>
+      <span>
+        <a href="../index.html">Version A</a>
+        <a href="../version-b/">Version B</a>
+        <a href="../checkout.html">Checkout</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
