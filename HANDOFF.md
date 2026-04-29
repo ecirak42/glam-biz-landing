@@ -13,6 +13,8 @@ A direct-response landing page for a $97 digital product: a personalized AI brid
 - `frame-vow/index.html` - alternate brand concept focused on a wedding look camera-readiness audit
 - `checkout.html` - Square payment handoff page for Wedding Day Preview ($97)
 - `assets/wedding-day-preview-report.jpg` - original sample report mockup used for the hero and deliverable preview
+- `assets/frame-vow-hero-audit.png` - generated Frame & Vow hero audit visual
+- `assets/frame-vow-report-audit.png` - generated Frame & Vow report preview visual
 - `HANDOFF.md` - this handoff doc
 
 No borrowed sample images are used on the live page. The product visual is an original sample report mockup inspired by beauty-analysis board layouts.
