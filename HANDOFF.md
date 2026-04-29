@@ -4,7 +4,7 @@ Handoff document for the current static site.
 
 ## What This Is
 
-A direct-response landing page for a $97 digital product: a personalized AI bridal beauty analysis / Wedding Day Preview. The customer pays through Square, then receives instructions to submit photos and wedding details. The final deliverable is a personalized PDF beauty brief covering face features, color, skin prep, makeup, hair, and styling.
+A direct-response landing page for a $97 digital product: a human-reviewed, AI-assisted bridal beauty plan / Wedding Day Preview. The customer pays through Square, then receives instructions to submit photos and wedding details. The final deliverable is a personalized PDF beauty brief covering face features, color, skin prep, makeup, hair, styling, and optional couple pose guidance. Expected delivery is 24-48 hours after intake is complete.
 
 ## Files
 
