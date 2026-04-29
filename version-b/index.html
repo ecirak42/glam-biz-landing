@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aisle Brief - Wedding Beauty Direction Before Your Trial</title>
+<meta name="description" content="A 24-hour bridal beauty brief with face, color, hair, makeup, skin, and styling direction you can send to your wedding beauty team." />
+<meta property="og:title" content="Aisle Brief - Your wedding beauty decisions, narrowed down." />
+<meta property="og:description" content="Upload photos and get a personalized bridal beauty brief before your hair and makeup trial." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #fffaf3;
+    --cream: #f4eadc;
+    --ink: #1c1714;
+    --muted: #6b6158;
+    --line: #e5d7c6;
+    --rose: #c7645c;
+    --rose-soft: #f2c6bc;
+    --copper: #a56838;
+    --olive: #6d7453;
+    --blue: #54707a;
+    --charcoal: #27211d;
+    --white: #ffffff;
+    --shadow: 0 20px 70px rgba(28, 23, 20, 0.14);
+    --radius: 8px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .serif { font-family: "Cormorant Garamond", Georgia, serif; }
+  .wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+
+  .topbar {
+    background: var(--charcoal);
+    color: var(--paper);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 16px;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(255, 250, 243, 0.88);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(14px);
+  }
+  .nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .brand strong {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 30px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .brand span {
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 18px;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+  .nav-link:hover { background: var(--ink); color: var(--paper); transform: translateY(-1px); }
+
+  .hero {
+    padding: 78px 0 64px;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(480px, 1.1fr);
+    gap: 54px;
+    align-items: center;
+  }
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--rose);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .kicker::before {
+    content: "";
+    width: 34px;
+    height: 2px;
+    background: var(--rose);
+  }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(48px, 6vw, 88px);
+    line-height: 0.92;
+    font-weight: 600;
+    letter-spacing: 0;
+    max-width: 620px;
+  }
+  .hero-copy {
+    max-width: 560px;
+    color: var(--muted);
+    font-size: 19px;
+    margin: 28px 0 34px;
+  }
+  .cta-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+    padding: 0 28px;
+    background: var(--ink);
+    color: var(--paper);
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    box-shadow: 0 14px 32px rgba(28, 23, 20, 0.18);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  .btn:hover { transform: translateY(-2px); background: #070605; }
+  .micro {
+    color: var(--muted);
+    font-size: 13px;
+    max-width: 260px;
+  }
+  .hero-points {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+  .hero-points span {
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.65);
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .brief-stage {
+    position: relative;
+    min-height: 560px;
+    display: grid;
+    place-items: center;
+  }
+  .brief-frame {
+    position: relative;
+    width: 100%;
+    max-width: 690px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 16px;
+    background:
+      linear-gradient(145deg, rgba(255,255,255,0.78), rgba(244,234,220,0.92)),
+      var(--cream);
+    box-shadow: var(--shadow);
+    transform: rotate(1.2deg);
+  }
+  .brief-frame img {
+    border-radius: 10px;
+    border: 1px solid rgba(28, 23, 20, 0.08);
+  }
+  .tag {
+    position: absolute;
+    z-index: 2;
+    display: grid;
+    gap: 2px;
+    min-width: 160px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(28, 23, 20, 0.12);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 16px 40px rgba(28, 23, 20, 0.14);
+    backdrop-filter: blur(12px);
+  }
+  .tag b { font-size: 13px; }
+  .tag span { color: var(--muted); font-size: 12px; }
+  .tag-one { top: 28px; left: -18px; }
+  .tag-two { right: -12px; top: 188px; }
+  .tag-three { left: 22px; bottom: 40px; }
+  .rail {
+    position: absolute;
+    z-index: -1;
+    inset: 38px 34px auto auto;
+    width: 68%;
+    height: 86%;
+    border: 1px solid var(--rose-soft);
+    border-radius: 28px;
+    transform: rotate(-4deg);
+  }
+
+  .strip {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--white);
+  }
+  .strip-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .strip-item {
+    padding: 28px 26px;
+    border-right: 1px solid var(--line);
+  }
+  .strip-item:last-child { border-right: none; }
+  .strip-item strong {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .strip-item span { color: var(--muted); font-size: 15px; }
+
+  section { padding: 88px 0; }
+  .section-head {
+    display: grid;
+    grid-template-columns: 0.74fr 1fr;
+    gap: 40px;
+    align-items: end;
+    margin-bottom: 38px;
+  }
+  .section-head h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(38px, 4.7vw, 66px);
+    line-height: 0.98;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .section-head p {
+    color: var(--muted);
+    font-size: 18px;
+    max-width: 620px;
+  }
+
+  .dark {
+    background: var(--charcoal);
+    color: var(--paper);
+  }
+  .dark .section-head p { color: #d8cab9; }
+  .dark .kicker { color: var(--rose-soft); }
+  .dark .kicker::before { background: var(--rose-soft); }
+  .split-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .issue {
+    min-height: 230px;
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: var(--radius);
+    padding: 26px;
+    background: rgba(255,255,255,0.05);
+  }
+  .issue span {
+    color: var(--rose-soft);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .issue h3 {
+    margin: 20px 0 10px;
+    font-size: 25px;
+    line-height: 1.1;
+  }
+  .issue p { color: #d8cab9; font-size: 15px; }
+
+  .decision-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .decision-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    min-height: 265px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 10px 34px rgba(28, 23, 20, 0.06);
+  }
+  .decision-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .num {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+  }
+  .dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--rose);
+  }
+  .dot.olive { background: var(--olive); }
+  .dot.copper { background: var(--copper); }
+  .dot.blue { background: var(--blue); }
+  .decision-card h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 34px;
+    line-height: 0.96;
+    font-weight: 600;
+  }
+  .decision-card p { color: var(--muted); font-size: 15px; }
+  .decision-card ul {
+    list-style: none;
+    margin-top: auto;
+    display: grid;
+    gap: 8px;
+  }
+  .decision-card li {
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .process {
+    background: var(--cream);
+  }
+  .process-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 42px;
+    align-items: start;
+  }
+  .receipt {
+    position: sticky;
+    top: 110px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+  }
+  .receipt h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 42px;
+    line-height: 0.95;
+    margin-bottom: 22px;
+  }
+  .receipt-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    border-top: 1px solid var(--line);
+    padding: 14px 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .receipt-row strong { color: var(--ink); }
+  .timeline {
+    display: grid;
+    gap: 14px;
+  }
+  .step {
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    gap: 20px;
+    background: rgba(255,255,255,0.58);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  .step-number {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--paper);
+    font-weight: 800;
+  }
+  .step h3 { font-size: 23px; margin-bottom: 6px; }
+  .step p { color: var(--muted); }
+
+  .proofless {
+    background: var(--white);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .proofless-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .plain-card {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 30px;
+    background: var(--paper);
+  }
+  .plain-card h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 34px;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .plain-card p { color: var(--muted); }
+
+  .final {
+    background:
+      linear-gradient(115deg, rgba(199,100,92,0.16), transparent 38%),
+      linear-gradient(290deg, rgba(84,112,122,0.16), transparent 40%),
+      var(--ink);
+    color: var(--paper);
+    padding: 98px 0;
+  }
+  .final-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 44px;
+    align-items: center;
+  }
+  .final h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(44px, 5vw, 74px);
+    line-height: 0.96;
+    max-width: 740px;
+  }
+  .final p {
+    color: #dfd1c0;
+    font-size: 18px;
+    max-width: 620px;
+    margin-top: 22px;
+  }
+  .price-card {
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+  }
+  .price-card span {
+    color: var(--rose);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .price {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 76px;
+    line-height: 1;
+    margin: 10px 0 6px;
+  }
+  .price-card p {
+    margin: 0 0 22px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .price-card .btn { width: 100%; }
+  footer {
+    background: var(--ink);
+    color: #b7aa9b;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 28px 0;
+    font-size: 13px;
+  }
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .foot a { color: #d8cab9; text-decoration: none; margin-left: 18px; }
+
+  @media (max-width: 980px) {
+    .hero-grid,
+    .section-head,
+    .process-grid,
+    .final-grid,
+    .proofless-box {
+      grid-template-columns: 1fr;
+    }
+    .hero-grid { gap: 36px; }
+    .brief-stage { min-height: 470px; }
+    .strip-grid,
+    .split-list,
+    .decision-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .receipt { position: static; }
+  }
+  @media (max-width: 640px) {
+    .wrap { width: min(100% - 28px, 1180px); }
+    .brand span { display: none; }
+    .nav { min-height: 64px; }
+    .hero { padding-top: 52px; }
+    .cta-row .btn, .price-card .btn { width: 100%; }
+    .micro { max-width: none; }
+    .brief-stage { min-height: 390px; }
+    .brief-frame { transform: none; padding: 10px; }
+    .tag { position: static; margin-top: 10px; min-width: 0; }
+    .tag-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      width: 100%;
+      margin-top: 12px;
+    }
+    .rail { display: none; }
+    .strip-grid,
+    .split-list,
+    .decision-grid {
+      grid-template-columns: 1fr;
+    }
+    .strip-item { border-right: none; border-bottom: 1px solid var(--line); }
+    .strip-item:last-child { border-bottom: none; }
+    section { padding: 68px 0; }
+    .step { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <div class="topbar">Delivered in 24 hours - personalized bridal beauty direction - $97</div>
+
+  <header>
+    <nav class="wrap nav" aria-label="Primary navigation">
+      <a class="brand" href="#">
+        <strong>Aisle</strong>
+        <span>Beauty Brief</span>
+      </a>
+      <a class="nav-link" href="#buy">Get the brief</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="kicker">Before the trial</div>
+          <h1>Stop collecting inspo. Start giving direction.</h1>
+          <p class="hero-copy">A personalized wedding beauty brief that turns your photos, dress, coloring, and style goals into clear hair, makeup, color, skin, and styling decisions.</p>
+          <div class="cta-row">
+            <a class="btn" href="#buy">Get my brief - $97</a>
+            <p class="micro">Delivered in 24 hours as a PDF you can send to your beauty team.</p>
+          </div>
+          <div class="hero-points" aria-label="Highlights">
+            <span>Face mapping</span>
+            <span>Color guardrails</span>
+            <span>Hair trial notes</span>
+            <span>MUA-ready brief</span>
+          </div>
+        </div>
+
+        <div class="brief-stage" aria-label="Sample Wedding Day Preview report">
+          <div class="rail"></div>
+          <div class="brief-frame">
+            <img src="../assets/wedding-day-preview-report.jpg" alt="Original sample Wedding Day Preview report mockup" />
+          </div>
+          <div class="tag tag-one"><b>Best directions</b><span>What to ask for first</span></div>
+          <div class="tag tag-two"><b>Less flattering</b><span>What to skip at the trial</span></div>
+          <div class="tag tag-three"><b>Shareable PDF</b><span>Built for your glam team</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip">
+      <div class="wrap strip-grid">
+        <div class="strip-item"><strong>Format</strong><span>Personalized PDF beauty brief</span></div>
+        <div class="strip-item"><strong>Timing</strong><span>Delivered within 24 hours</span></div>
+        <div class="strip-item"><strong>Use it for</strong><span>Hair and makeup trial direction</span></div>
+        <div class="strip-item"><strong>Price</strong><span>$97 secure checkout</span></div>
+      </div>
+    </div>
+
+    <section class="dark">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">The real problem</div>
+            <h2>Your trial should not be the first draft.</h2>
+          </div>
+          <p>Most brides walk into the chair with references, not a strategy. Version B frames the product as a decision tool: the thing that helps you brief your artist clearly before money, time, and emotions are on the line.</p>
+        </div>
+        <div class="split-list">
+          <article class="issue">
+            <span>01</span>
+            <h3>Inspo does not explain why</h3>
+            <p>A look can be beautiful and still be wrong for your features, coloring, venue light, dress neckline, or comfort level.</p>
+          </article>
+          <article class="issue">
+            <span>02</span>
+            <h3>Artists need a clearer target</h3>
+            <p>"Natural but glam" can mean twenty different things. A brief gives your beauty team sharper language and visual guardrails.</p>
+          </article>
+          <article class="issue">
+            <span>03</span>
+            <h3>Second-guessing is expensive</h3>
+            <p>Multiple trials, product panic, last-minute hair changes, and color uncertainty cost more than deciding earlier.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">What gets decided</div>
+            <h2>Six parts of your wedding look, narrowed down.</h2>
+          </div>
+          <p>The brief is designed around decisions a bride actually has to make before the wedding: what enhances your face, what colors help you glow, what to ask your team for, and what to confidently leave behind.</p>
+        </div>
+
+        <div class="decision-grid">
+          <article class="decision-card">
+            <div class="decision-top"><span class="num">01 / FACE</span><span class="dot"></span></div>
+            <h3>Feature map</h3>
+            <p>Face shape, feature balance, best emphasis points, and how to keep the makeup harmonious in photos.</p>
+            <ul><li>Eye/lip focus</li><li>Blush and contour placement</li><li>Softening or lifting notes</li></ul>
+          </article>
+          <article class="decision-card">
+            <div class="decision-top"><span class="num">02 / COLOR</span><span class="dot olive"></span></div>
+            <h3>Color guardrails</h3>
+            <p>Your best tones for makeup, accessories, events, and anything sitting close to your face.</p>
+            <ul><li>Best neutrals</li><li>Metals and lip families</li><li>Colors to avoid</li></ul>
+          </article>
+          <article class="decision-card">
+            <div class="decision-top"><span class="num">03 / HAIR</span><span class="dot copper"></span></div>
+            <h3>Hair direction</h3>
+            <p>Styles, shape, volume, parting, texture, and accessory guidance to bring into your hair trial.</p>
+            <ul><li>Most flattering silhouettes</li><li>Veil and accessory notes</li><li>Less flattering choices</li></ul>
+          </article>
+          <article class="decision-card">
+            <div class="decision-top"><span class="num">04 / MAKEUP</span><span class="dot blue"></span></div>
+            <h3>Glam brief</h3>
+            <p>A clear makeup direction that turns "soft glam" into actual decisions your artist can interpret.</p>
+            <ul><li>Eyes, cheeks, lips</li><li>Skin finish</li><li>Lash and liner direction</li></ul>
+          </article>
+          <article class="decision-card">
+            <div class="decision-top"><span class="num">05 / SKIN</span><span class="dot"></span></div>
+            <h3>Prep priorities</h3>
+            <p>Simple, non-chaotic guidance for what to focus on before the wedding week based on your visible skin needs.</p>
+            <ul><li>Hydration vs. oil balance</li><li>Texture and redness notes</li><li>Wedding-week caution</li></ul>
+          </article>
+          <article class="decision-card">
+            <div class="decision-top"><span class="num">06 / TEAM</span><span class="dot olive"></span></div>
+            <h3>Shareable notes</h3>
+            <p>Plain-language direction you can forward before your trial so everyone starts from the same page.</p>
+            <ul><li>MUA notes</li><li>Hairstylist notes</li><li>Final look priorities</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="wrap process-grid">
+        <aside class="receipt">
+          <h3>Your 24-hour beauty brief</h3>
+          <div class="receipt-row"><span>Personalized PDF</span><strong>Included</strong></div>
+          <div class="receipt-row"><span>Face + color analysis</span><strong>Included</strong></div>
+          <div class="receipt-row"><span>Hair + makeup notes</span><strong>Included</strong></div>
+          <div class="receipt-row"><span>Skin + styling direction</span><strong>Included</strong></div>
+          <div class="receipt-row"><span>Total</span><strong>$97</strong></div>
+        </aside>
+        <div class="timeline">
+          <div class="section-head" style="display:block;margin-bottom:18px;">
+            <div class="kicker">How it works</div>
+            <h2>Built around your actual face, not a saved folder.</h2>
+          </div>
+          <article class="step">
+            <div class="step-number">1</div>
+            <div><h3>Upload the useful pieces</h3><p>Send clear photos of yourself, your dress if you have it, and any wedding details that shape the vibe.</p></div>
+          </article>
+          <article class="step">
+            <div class="step-number">2</div>
+            <div><h3>We map what matters</h3><p>Your face shape, coloring, hair texture, skin needs, dress neckline, and aesthetic are turned into practical recommendations.</p></div>
+          </article>
+          <article class="step">
+            <div class="step-number">3</div>
+            <div><h3>You receive the brief</h3><p>Within 24 hours, you get a polished PDF you can save, print, or send to your makeup artist and hairstylist.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="proofless">
+      <div class="wrap proofless-box">
+        <article class="plain-card">
+          <h3>No borrowed client results.</h3>
+          <p>This concept uses an original sample mockup to show the style of deliverable. The final PDF is personalized from the bride's own photos and details.</p>
+        </article>
+        <article class="plain-card">
+          <h3>No inflated proof.</h3>
+          <p>Since this is a new offer, this version leans on clarity, specificity, privacy, and usefulness instead of pretending the brand is older than it is.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="final" id="buy">
+      <div class="wrap final-grid">
+        <div>
+          <div class="kicker">Get the brief</div>
+          <h2>Walk into your trial with direction, not doubt.</h2>
+          <p>For $97, get a personalized bridal beauty brief built to make your hair, makeup, color, and styling decisions easier before the wedding pressure hits.</p>
+        </div>
+        <aside class="price-card" aria-label="Checkout summary">
+          <span>Wedding Day Preview</span>
+          <div class="price">$97</div>
+          <p>Secure checkout. Delivered in 24 hours as a personalized PDF.</p>
+          <a class="btn" href="../checkout.html">Start secure checkout</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>&copy; 2026 Aisle. Bridal beauty direction before the trial.</span>
+      <span>
+        <a href="../index.html">Version A</a>
+        <a href="../checkout.html">Checkout</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>

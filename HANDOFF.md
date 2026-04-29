@@ -9,6 +9,7 @@ A direct-response landing page for a $97 digital product: a personalized AI brid
 ## Files
 
 - `index.html` - landing page, single static file
+- `version-b/index.html` - alternate landing page concept with a sharper pre-trial beauty brief angle
 - `checkout.html` - Square payment handoff page for Wedding Day Preview ($97)
 - `assets/wedding-day-preview-report.jpg` - original sample report mockup used for the hero and deliverable preview
 - `HANDOFF.md` - this handoff doc
@@ -38,5 +39,6 @@ The checkout page keeps users on-site by embedding Square checkout. A fallback l
 - Static HTML/CSS/JS only; no build step.
 - Main brand tokens live in the `:root` blocks of `index.html` and `checkout.html`.
 - Landing CTA links point to `checkout.html`.
+- Version B lives at `/version-b/` and points to `../checkout.html`.
 - Keep future visuals original, licensed, or client-approved.
 
