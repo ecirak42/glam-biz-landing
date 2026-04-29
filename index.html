@@ -217,21 +217,26 @@
   /* HERO VISUAL */
   .hero-visual {
     position: relative;
-    aspect-ratio: 4/5;
+    aspect-ratio: 1.12/1;
+    min-height: 420px;
     border-radius: var(--radius-lg);
-    overflow: hidden;
-    background: var(--bg-alt);
+    overflow: visible;
+    background: transparent;
     box-shadow: var(--shadow-lift);
   }
   .hero-photo {
     width: 100%;
     height: 100%;
     background:
-      linear-gradient(160deg, rgba(217, 167, 160, 0.25) 0%, rgba(244, 236, 227, 0.7) 50%, rgba(196, 168, 120, 0.25) 100%);
+      linear-gradient(160deg, rgba(217, 167, 160, 0.20) 0%, rgba(244, 236, 227, 0.92) 52%, rgba(196, 168, 120, 0.18) 100%);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 18px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    overflow: hidden;
   }
   .hero-photo::before {
     content: '';
@@ -245,7 +250,13 @@
   .hero-preview-img {
     position: relative;
     z-index: 1;
-    width: min(90%, 430px);
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: top center;
+    border-radius: 8px;
+    border: 1px solid rgba(42, 37, 33, 0.08);
     filter: drop-shadow(0 24px 32px rgba(42, 37, 33, 0.18));
   }
 
@@ -646,132 +657,6 @@
     text-transform: uppercase;
   }
 
-  /* DELIVERABLE PREVIEW */
-  .deliverable-clarity {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin: 52px 0 28px;
-  }
-  .clarity-card {
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    padding: 24px;
-  }
-  .clarity-card strong {
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 6px;
-  }
-  .clarity-card span {
-    display: block;
-    color: var(--ink-soft);
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .sample-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 34px;
-  }
-  .sample-board {
-    min-height: 360px;
-    border-radius: var(--radius-lg);
-    background: var(--surface);
-    border: 1px solid var(--line);
-    box-shadow: var(--shadow);
-    padding: 22px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  .sample-board:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lift);
-  }
-  .sample-board h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 1;
-    text-align: center;
-  }
-  .sample-board-kicker {
-    text-align: center;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--blush-deep);
-  }
-  .sample-board-visual {
-    min-height: 118px;
-    border-radius: 8px;
-    background: var(--bg-alt);
-    border: 1px solid var(--line);
-    display: grid;
-    place-items: center;
-    padding: 16px;
-  }
-  .sample-face {
-    width: 88px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: linear-gradient(145deg, #7C5137, #D9A07B 44%, #EBC7AF 45% 100%);
-    border: 8px solid rgba(255,255,255,0.75);
-  }
-  .sample-palette,
-  .sample-tiles {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .sample-palette span {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.06);
-  }
-  .sample-tiles span {
-    width: 72px;
-    height: 86px;
-    border-radius: 6px;
-    background: linear-gradient(160deg, var(--bg), var(--bg-alt));
-    border: 1px solid var(--line);
-  }
-  .sample-board ul {
-    list-style: none;
-    display: grid;
-    gap: 9px;
-    margin-top: auto;
-  }
-  .sample-board li {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 8px;
-    font-size: 13px;
-    color: var(--ink-soft);
-  }
-  .sample-board li:last-child { border-bottom: none; padding-bottom: 0; }
-  .sample-board li strong {
-    color: var(--ink);
-    font-weight: 600;
-  }
-  .sample-note {
-    text-align: center;
-    margin-top: 28px;
-    font-size: 13px;
-    color: var(--ink-faint);
-    font-style: italic;
-  }
-
   .compare-table {
     max-width: 720px;
     margin: 60px auto 0;
@@ -944,11 +829,6 @@
     .steps { grid-template-columns: 1fr; gap: 48px; }
     .boards { grid-template-columns: 1fr; gap: 14px; }
     .deliverable-examples { grid-template-columns: 1fr; }
-    .deliverable-clarity { grid-template-columns: 1fr; }
-    .sample-gallery {
-      grid-template-columns: 1fr;
-      gap: 32px;
-    }
     section { padding: 64px 0; }
     .final-cta { padding: 80px 24px; }
     .nav-cta { padding: 8px 16px; font-size: 13px; }
@@ -960,6 +840,7 @@
     body { font-size: 16px; }
     .btn { padding: 16px 28px; font-size: 15px; width: 100%; }
     .btn-large { padding: 20px 32px; }
+    .hero-visual { min-height: 320px; }
     .analysis-card { width: 200px; padding: 14px 16px; }
     .analysis-card-2 { width: 180px; padding: 12px 14px; }
     .hero-trust { gap: 16px; }
@@ -1003,33 +884,33 @@
 
     <div class="hero-visual">
       <div class="hero-photo">
-        <img class="hero-preview-img" src="assets/hero-product-preview.svg" alt="Preview of the Wedding Day Preview PDF with face, color, hair, makeup, skin, and style pages" />
+        <img class="hero-preview-img" src="assets/wedding-day-preview-report.jpg" alt="Sample Wedding Day Preview PDF with beauty analysis boards" />
       </div>
 
       <div class="analysis-card">
-        <div class="analysis-card-title">Your analysis</div>
+        <div class="analysis-card-title">The PDF includes</div>
         <div class="analysis-row">
-          <span class="analysis-row-key">Face shape</span>
-          <span class="analysis-row-val">Soft oval</span>
+          <span class="analysis-row-key">Face + features</span>
+          <span class="analysis-row-val">Mapped</span>
         </div>
         <div class="analysis-row">
-          <span class="analysis-row-key">Season</span>
-          <span class="analysis-row-val">Warm autumn</span>
+          <span class="analysis-row-key">Colors</span>
+          <span class="analysis-row-val">Best + avoid</span>
         </div>
         <div class="analysis-row">
-          <span class="analysis-row-key">Skin</span>
-          <span class="analysis-row-val">Combination</span>
+          <span class="analysis-row-key">Hair + makeup</span>
+          <span class="analysis-row-val">Trial-ready</span>
         </div>
         <div class="analysis-row">
           <span class="analysis-row-key">Includes</span>
           <span class="analysis-row-val">
-            6 boards
+            24 hr delivery
           </span>
         </div>
       </div>
 
       <div class="analysis-card-2">
-        <div class="analysis-card-title">Example outputs</div>
+        <div class="analysis-card-title">Designed to share</div>
         <span class="pill">Best colors</span>
         <span class="pill">Hair direction</span>
         <span class="pill">Soft glam</span>
@@ -1112,154 +993,50 @@
 <!-- WHAT YOU GET -->
 <section class="section-bg-alt">
   <div class="container-narrow">
-    <div class="section-eyebrow">What you get</div>
-    <h2 class="section-h">A personalized PDF that turns your photos into a wedding-day beauty plan.</h2>
-    <p class="section-sub">You get clear visual pages, exact recommendations, and practical notes your beauty team can use. No vague inspo dump, no guessing at the trial.</p>
+    <div class="section-eyebrow">What lands in your inbox</div>
+    <h2 class="section-h">One personalized PDF with the decisions already narrowed down.</h2>
+    <p class="section-sub">Your report is built to answer the questions that usually make bridal beauty feel overwhelming: what flatters you, what to ask for, what to avoid, and what to send to your beauty team.</p>
   </div>
   <div class="container">
     <figure class="deliverable-image">
       <div class="deliverable-image-frame">
-        <img src="assets/deliverable-pages-preview.svg" alt="Six example Wedding Day Preview pages: face, color, skin, hair, makeup, and styling" />
+        <img src="assets/wedding-day-preview-report.jpg" alt="Sample Wedding Day Preview report showing beauty analysis boards" />
       </div>
-      <figcaption>Original sample mockup. Your final PDF is personalized from your photos and wedding details.</figcaption>
+      <figcaption>Original sample mockup. Your final PDF is personalized from your photos, coloring, hair, dress, and wedding details.</figcaption>
     </figure>
 
     <div class="deliverable-examples" aria-label="Examples of what the Wedding Day Preview includes">
       <article class="example-card">
-        <span class="example-label">Face + makeup</span>
-        <h5>"Here is what to emphasize."</h5>
-        <p>Face shape, feature balance, eye/lip focus, blush placement, contour notes, and the makeup finish that will photograph best.</p>
+        <span class="example-label">Face analysis</span>
+        <h5>Your best emphasis points</h5>
+        <p>Face shape, feature balance, eye/lip focus, blush placement, contour notes, and what will photograph most harmoniously.</p>
       </article>
       <article class="example-card">
-        <span class="example-label">Color + styling</span>
-        <h5>"Here are your best colors."</h5>
-        <p>Your undertone, best neutrals, wedding-week palette, metal choice, lipstick family, and colors to avoid near your face.</p>
+        <span class="example-label">Color plan</span>
+        <h5>Your best palette</h5>
+        <p>Undertone, season, best neutrals, wedding-week colors, metal choice, lipstick family, and shades to avoid near your face.</p>
       </article>
       <article class="example-card">
-        <span class="example-label">Hair + skin prep</span>
-        <h5>"Bring this to your trial."</h5>
-        <p>Most flattering hair direction, styles to skip, skin-prep priorities, and a concise checklist for your MUA and hairstylist.</p>
+        <span class="example-label">Hair direction</span>
+        <h5>Styles to try and skip</h5>
+        <p>Most flattering silhouettes, parting notes, volume placement, veil/accessory direction, and less flattering options to avoid.</p>
+      </article>
+      <article class="example-card">
+        <span class="example-label">Makeup plan</span>
+        <h5>A clear glam brief</h5>
+        <p>Eye shadow families, liner style, lash direction, cheek placement, lip tones, skin finish, and product-style notes.</p>
+      </article>
+      <article class="example-card">
+        <span class="example-label">Skin prep</span>
+        <h5>Wedding-week priorities</h5>
+        <p>A simple prep direction based on shine, dryness, texture, pores, redness, or sensitivity, with a gentle-not-risky focus.</p>
+      </article>
+      <article class="example-card">
+        <span class="example-label">Styling notes</span>
+        <h5>Shareable trial direction</h5>
+        <p>Plain-language notes you can forward to your makeup artist, hairstylist, planner, or tailor before the trial.</p>
       </article>
     </div>
-  </div>
-</section>
-
-<!-- SAMPLE GALLERY -->
-<section>
-  <div class="container-narrow">
-    <div class="section-eyebrow">Inside the PDF</div>
-    <h2 class="section-h">Six pages, each with a clear job.</h2>
-    <p class="section-sub">The report is organized so you can make decisions quickly: what suits you, what to ask for, what to avoid, and what to send to each person helping with your wedding look.</p>
-  </div>
-  <div class="container">
-    <div class="deliverable-clarity">
-      <div class="clarity-card">
-        <strong>Overview first</strong>
-        <span>A quick read on your face, colors, skin, hair, makeup, and styling direction before the detailed pages.</span>
-      </div>
-      <div class="clarity-card">
-        <strong>Trial-ready notes</strong>
-        <span>Plain-language direction you can forward to your MUA, hairstylist, planner, or tailor.</span>
-      </div>
-      <div class="clarity-card">
-        <strong>Decision filters</strong>
-        <span>Best options, less flattering choices, and the reason behind each recommendation.</span>
-      </div>
-    </div>
-    <div class="sample-gallery">
-      <article class="sample-board">
-        <div class="sample-board-kicker">Board 01</div>
-        <h3>Face Features</h3>
-        <div class="sample-board-visual"><div class="sample-face"></div></div>
-        <ul>
-          <li><span>Face shape</span><strong>Soft oval</strong></li>
-          <li><span>Best features</span><strong>Eyes + cheekbones</strong></li>
-          <li><span>Makeup focus</span><strong>Lift and balance</strong></li>
-        </ul>
-      </article>
-
-      <article class="sample-board">
-        <div class="sample-board-kicker">Board 02</div>
-        <h3>Color Season</h3>
-        <div class="sample-board-visual">
-          <div class="sample-palette">
-            <span style="background:#8C7B3E"></span>
-            <span style="background:#C96F45"></span>
-            <span style="background:#D5B58A"></span>
-            <span style="background:#6E5946"></span>
-            <span style="background:#EFE0CF"></span>
-          </div>
-        </div>
-        <ul>
-          <li><span>Season</span><strong>Soft autumn</strong></li>
-          <li><span>Best metals</span><strong>Gold + rose gold</strong></li>
-          <li><span>Avoid</span><strong>Icy, neon, harsh black</strong></li>
-        </ul>
-      </article>
-
-      <article class="sample-board">
-        <div class="sample-board-kicker">Board 03</div>
-        <h3>Hair Direction</h3>
-        <div class="sample-board-visual">
-          <div class="sample-tiles"><span></span><span></span><span></span></div>
-        </div>
-        <ul>
-          <li><span>Best styles</span><strong>Soft volume</strong></li>
-          <li><span>Parting</span><strong>Center or soft side</strong></li>
-          <li><span>Skip</span><strong>Flat, severe finishes</strong></li>
-        </ul>
-      </article>
-
-      <article class="sample-board">
-        <div class="sample-board-kicker">Board 04</div>
-        <h3>Makeup Plan</h3>
-        <div class="sample-board-visual">
-          <div class="sample-palette">
-            <span style="background:#E7C4A8"></span>
-            <span style="background:#C77C68"></span>
-            <span style="background:#9C6044"></span>
-            <span style="background:#6D3F2F"></span>
-          </div>
-        </div>
-        <ul>
-          <li><span>Eyes</span><strong>Bronze soft glam</strong></li>
-          <li><span>Lips</span><strong>Warm rose nude</strong></li>
-          <li><span>Finish</span><strong>Radiant, not shiny</strong></li>
-        </ul>
-      </article>
-
-      <article class="sample-board">
-        <div class="sample-board-kicker">Board 05</div>
-        <h3>Skin Prep</h3>
-        <div class="sample-board-visual">
-          <div class="sample-tiles"><span></span><span></span><span></span></div>
-        </div>
-        <ul>
-          <li><span>Skin type</span><strong>Combination</strong></li>
-          <li><span>Priority</span><strong>Hydrate + balance</strong></li>
-          <li><span>Wedding week</span><strong>Gentle prep only</strong></li>
-        </ul>
-      </article>
-
-      <article class="sample-board">
-        <div class="sample-board-kicker">Board 06</div>
-        <h3>Styling Capsule</h3>
-        <div class="sample-board-visual">
-          <div class="sample-palette">
-            <span style="background:#F2E6D8"></span>
-            <span style="background:#C9A06B"></span>
-            <span style="background:#8FA08C"></span>
-            <span style="background:#3F3028"></span>
-          </div>
-        </div>
-        <ul>
-          <li><span>Events</span><strong>Rehearsal to after-party</strong></li>
-          <li><span>Accessories</span><strong>Metals + hair pieces</strong></li>
-          <li><span>Vibe</span><strong>Elegant, cohesive</strong></li>
-        </ul>
-      </article>
-    </div>
-    <p class="sample-note">These are original layout mockups, not client work. Your final PDF is customized from your uploaded photos and wedding details.</p>
   </div>
 </section>
 

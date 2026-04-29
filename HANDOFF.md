@@ -10,11 +10,10 @@ A direct-response landing page for a $97 digital product: a personalized AI brid
 
 - `index.html` - landing page, single static file
 - `checkout.html` - Square payment handoff page for Wedding Day Preview ($97)
-- `assets/hero-product-preview.svg` - original hero product preview graphic
-- `assets/deliverable-pages-preview.svg` - original deliverable pages preview graphic
+- `assets/wedding-day-preview-report.jpg` - original sample report mockup used for the hero and deliverable preview
 - `HANDOFF.md` - this handoff doc
 
-No borrowed sample images are used on the live page. The product visuals are original SVG mockups inspired by beauty-analysis board layouts.
+No borrowed sample images are used on the live page. The product visual is an original sample report mockup inspired by beauty-analysis board layouts.
 
 ## Current Checkout
 
